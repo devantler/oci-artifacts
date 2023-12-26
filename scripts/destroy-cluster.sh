@@ -25,4 +25,4 @@ function main() {
   echo ""
 }
 
-main "homelab-docker"
+main "test-docker"

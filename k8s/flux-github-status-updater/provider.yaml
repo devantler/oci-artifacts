@@ -4,6 +4,6 @@ metadata:
   name: github-status
 spec:
   type: github
-  address: https://github.com/devantler/homelab
+  address: https://github.com/devantler/oci-registry
   secretRef:
     name: github-token
