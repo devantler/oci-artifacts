@@ -4,7 +4,7 @@ A service that automatically adjusts the CPU and memory reservations for your po
 
 ## Dependencies
 
-- [Metrics Server](../../../k8s/infrastructure/metrics-server/README.md)
+- [Metrics Server](../infrastructure/metrics-server/README.md)
 
 ## CRDs
 

@@ -297,7 +297,7 @@ function main() {
   }
 }
 
-main "test-cluster-docker" || {
+main "test-docker" || {
   echo "🚨 Provisioning failed. Exiting..."
   exit 1
 }

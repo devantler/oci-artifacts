@@ -4,4 +4,4 @@ GitHub Runner Scale Set enables running self-hosted GitHub Actions runners in Ku
 
 ## Dependencies
 
-- [GitHub Runner Scale Set Controller](../../../k8s/infrastructure/gha-runner-scale-set-controller/README.md)
+- [GitHub Runner Scale Set Controller](../infrastructure/gha-runner-scale-set-controller/README.md)

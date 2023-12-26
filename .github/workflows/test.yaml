@@ -41,7 +41,7 @@ jobs:
       - name: ⚙️ Install Flux
         uses: fluxcd/flux2/action@main
       - name: ⛴️ Provision cluster
-        run: $SCRIPTS_DIR/provision-cluster.sh test-cluster-docker
+        run: $SCRIPTS_DIR/provision-cluster.sh test-docker
         env:
           SOPS_GPG_KEY: ${{ secrets.SOPS_GPG_KEY }}
       - name: 🐎 Print free CPU
