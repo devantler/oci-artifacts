@@ -1,0 +1,4 @@
+creation_rules:
+  - path_regex: .sops.yaml
+    encrypted_regex: ^(data|stringData)$
+    pgp: F78D523ADB73F206EA60976DED58208970F326C8

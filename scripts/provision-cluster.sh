@@ -262,7 +262,7 @@ function install_flux() {
 
   flux create kustomization flux-system \
     --source=OCIRepository/flux-system \
-    --path=./clusters/docker/.flux || {
+    --path=./clusters/docker/flux || {
     echo "🚨 Flux kustomization creation failed. Exiting..."
     exit 1
   }
@@ -297,7 +297,7 @@ function main() {
   }
 }
 
-main "test-docker" || {
+main "test-cluster-docker" || {
   echo "🚨 Provisioning failed. Exiting..."
   exit 1
 }
