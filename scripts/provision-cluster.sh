@@ -257,7 +257,7 @@ function install_flux() {
 
   flux create kustomization flux-system \
     --source=OCIRepository/flux-system \
-    --path=./.test/flux || {
+    --path=./.test/.flux || {
     echo "🚨 Flux kustomization creation failed. Exiting..."
     exit 1
   }
