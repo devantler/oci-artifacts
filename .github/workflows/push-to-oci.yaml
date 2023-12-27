@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
   push-to-oci:
-    name: Push to OCI
+    name: Push manifests to OCI
     runs-on: ubuntu-latest
     steps:
       - name: 📑 Checkout
@@ -22,14 +22,14 @@ jobs:
         uses: fluxcd/flux2/action@main
       - name: 🗳️ Push to OCI
         run: |
-          flux push artifact oci://ghcr.io/${{ github.repository }}:${{ github.sha }} \
+          flux push artifact oci://ghcr.io/${{ github.repository }}/manifests:${{ github.sha }} \
             --path=./k8s \
             --source="$(git config --get remote.origin.url)" \
             --revision="$(git branch --show-current)@sha1:$(git rev-parse HEAD)" \
             --creds=${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
-          flux tag artifact oci://ghcr.io/${{ github.repository }}:${{ github.sha }} \
+          flux tag artifact oci://ghcr.io/${{ github.repository }}/manifests:${{ github.sha }} \
             --tag ${{ github.ref_name }} \
             --creds=${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
-          flux tag artifact oci://ghcr.io/${{ github.repository }}:${{ github.sha }} \
+          flux tag artifact oci://ghcr.io/${{ github.repository }}/manifests:${{ github.sha }} \
             --tag latest \
             --creds=${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
