@@ -29,6 +29,11 @@ spec:
         defaultCertificate:
           secretName: cluster-issuer-certificate-tls
     service:
-      type: ${traefik_service_type:=ClusterIP}
+      type: ${traefik_service_type:=LoadBalancer}
       spec:
-        loadBalancerIP: ${traefik_load_balancer_ip}
+        loadBalancerIP: ${traefik_ingress_load_balancer_ip}
+    ingressRoute:
+      dashboard:
+        matchRule: Host(`traefik.${cluster_domain}`)
+        entryPoints:
+          - websecure
