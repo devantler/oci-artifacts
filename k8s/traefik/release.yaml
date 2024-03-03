@@ -21,7 +21,8 @@ spec:
       tag: v3.0.0-beta3
     ports:
       web:
-        redirectTo: websecure
+        redirectTo:
+          port: websecure
       websecure:
         asDefault: true
     tlsStore:
