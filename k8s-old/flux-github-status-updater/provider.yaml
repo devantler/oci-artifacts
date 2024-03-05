@@ -4,6 +4,6 @@ metadata:
   name: github-status
 spec:
   type: github
-  address: https://github.com/devantler/oci-registry
+  address: https://github.com/devantler/oci-artifacts
   secretRef:
     name: github-token
