@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
   - ../../../../cert-manager
   - ../../../../cilium
+  - ../../../../gateway-api
   - ../../../../metrics-server
   - ../../../../reloader
-  - ../../../../traefik
   - ../../../../vertical-pod-autoscaler
