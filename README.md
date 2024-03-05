@@ -1,4 +1,4 @@
-# Welcome to Devantler's OCI Registry 🚀
+# Welcome to Devantler's OCI Artifacts 🚀
 
 <details>
   <summary>Show/Hide Folder Structure</summary>
