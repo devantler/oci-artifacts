@@ -11,6 +11,9 @@ options:
       - arg: "--disable=traefik"
         nodeFilters:
           - server:*
+      - arg: "--disable=metrics-server"
+        nodeFilters:
+          - server:*
 registries:
   config: |
     mirrors:

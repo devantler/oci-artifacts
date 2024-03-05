@@ -7,7 +7,6 @@ spec:
   dependsOn:
     - name: cert-manager
       namespace: cert-manager
-  # install.crds does not work with this chart.
   chart:
     spec:
       chart: traefik
