@@ -6,7 +6,7 @@ spec:
   interval: 5m
   dependsOn:
     - name: metrics-server
-      namespace: metrics-server
+      namespace: kube-system
   install:
     crds: CreateReplace
   upgrade:
@@ -19,4 +19,7 @@ spec:
         kind: HelmRepository
         name: vertical-pod-autoscaler
   # https://github.com/cowboysysop/charts/blob/master/charts/vertical-pod-autoscaler/values.yaml
-  values: {}
+  values:
+    updater:
+      extraArgs:
+        min-replicas: ${vpa_min_replicas:=1}
