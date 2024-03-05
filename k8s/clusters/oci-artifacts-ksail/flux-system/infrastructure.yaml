@@ -5,12 +5,12 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  dependsOn: 
+  dependsOn:
     - name: variables
   sourceRef:
     kind: OCIRepository
     name: flux-system
-  path: infrastructure/services
+  path: clusters/oci-artifacts-ksail/infrastructure/services
   prune: true
   wait: true
   decryption:
@@ -18,7 +18,7 @@ spec:
     secretRef:
       name: sops-age
   postBuild:
-    substituteFrom: 
+    substituteFrom:
       - kind: ConfigMap
         name: variables
       - kind: Secret
@@ -31,12 +31,12 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  dependsOn: 
+  dependsOn:
     - name: infrastructure-services
   sourceRef:
     kind: OCIRepository
     name: flux-system
-  path: infrastructure/configs
+  path: clusters/oci-artifacts-ksail/infrastructure/configs
   prune: true
   wait: true
   decryption:
@@ -44,7 +44,7 @@ spec:
     secretRef:
       name: sops-age
   postBuild:
-    substituteFrom: 
+    substituteFrom:
       - kind: ConfigMap
         name: variables
       - kind: Secret
