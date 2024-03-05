@@ -20,6 +20,11 @@ spec:
           paths:
             - path: /
               pathType: ImplementationSpecific
+      tls:
+        - secretName: dex-cert
+          hosts:
+            - dex.${cluster_domain}
+
     config:
       issuer: https://dex.${cluster_domain}
       storage:
