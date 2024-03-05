@@ -7,43 +7,33 @@
 ```
 .
 ├── .github
-│   ├── scripts
 │   └── workflows
+├── .vscode
 ├── k8s
-│   ├── .test
-│   │   ├── .flux
-│   │   ├── configs
-│   │   ├── services
-│   │   └── variables
 │   ├── cert-manager
 │   │   ├── certificates
 │   │   └── cluster-issuers
-│   ├── cloudflared
-│   ├── flux-github-status-updater
-│   ├── flux-webhook-receiver
-│   │   ├── ingress-routes
-│   │   └── secrets
-│   ├── gha-runner-scale-set
-│   ├── gha-runner-scale-set-controller
-│   ├── harbor
-│   ├── kube-prometheus-stack
-│   ├── kubelet-serving-cert-approver
+│   ├── clusters
+│   │   └── oci-artifacts-ksail
+│   │       ├── flux-system
+│   │       ├── infrastructure
+│   │       │   ├── configs
+│   │       │   └── services
+│   │       └── variables
 │   ├── metrics-server
-│   ├── openebs
-│   ├── pulumi-operator
-│   │   └── programs
-│   ├── redis
 │   ├── reloader
-│   ├── testkube
 │   ├── traefik
 │   └── vertical-pod-autoscaler
-├── scripts
-└── talos
-    ├── cluster
-    ├── controlplane
-    └── worker
+└── k8s-old
+    ├── cloudflared
+    ├── flux-github-status-updater
+    ├── flux-webhook-receiver
+    │   ├── ingress-routes
+    │   └── secrets
+    ├── kube-prometheus-stack
+    └── openebs
 
-36 directories
+26 directories
 ```
 <!-- readme-tree end -->
 
