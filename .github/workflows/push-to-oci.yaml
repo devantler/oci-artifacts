@@ -2,10 +2,9 @@ name: Push to OCI
 
 on:
   push:
-    branches:
-      - main
-    tags:
-      - 'v*.*.*'
+    branches: "main"
+    tags: "v*.*.*"
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -13,7 +12,7 @@ concurrency:
 
 jobs:
   push-to-oci:
-    name: Push manifests to OCI
+    name: Push to OCI
     runs-on: ubuntu-latest
     steps:
       - name: 📑 Checkout

@@ -1,0 +1,18 @@
+{
+  "folders": [
+    {
+      "name": "📦 OCI Artifacts",
+      "path": "../"
+    }
+  ],
+  "settings": {
+    "runOnSave.commands": [
+      {
+        "command": "ksail update oci-artifacts-ksail",
+        "finishStatusMessage": ">${fileBasename} changed: Clusters updated...",
+        "globMatch": "${workspaceFolder}/k8s/**/*.yaml",
+        "runningStatusMessage": ">${fileBasename} changed: Updating clusters..."
+      }
+    ]
+  }
+}

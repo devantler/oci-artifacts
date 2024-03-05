@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "inercia.vscode-k3d",
+    "pucelle.run-on-save",
+    "redhat.vscode-yaml",
+    "ShipitSmarter.sops-edit",
+    "weaveworks.vscode-gitops-tools",
+    "ms-azuretools.vscode-docker",
+    "timonwong.shellcheck",
+    "ms-kubernetes-tools.vscode-aks-tools",
+    "foxundermoon.shell-format",
+  ]
+}
