@@ -16,4 +16,5 @@ spec:
         kind: HelmRepository
         name: cilium
   # https://github.com/cilium/cilium/blob/main/install/kubernetes/cilium/values.yaml
-  values: {}
+  values:
+    kubeProxyReplacement: true
