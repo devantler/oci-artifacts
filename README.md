@@ -13,6 +13,7 @@
 │   ├── cert-manager
 │   │   ├── certificates
 │   │   └── cluster-issuers
+│   ├── cloudflared
 │   ├── clusters
 │   │   └── oci-artifacts-ksail
 │   │       ├── flux-system
@@ -20,12 +21,11 @@
 │   │       │   ├── configs
 │   │       │   └── services
 │   │       └── variables
+│   ├── dex
 │   ├── metrics-server
-│   ├── reloader
 │   ├── traefik
 │   └── vertical-pod-autoscaler
 └── k8s-old
-    ├── cloudflared
     ├── flux-github-status-updater
     ├── flux-webhook-receiver
     │   ├── ingress-routes
