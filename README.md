@@ -23,6 +23,7 @@
 │   │       │   └── services
 │   │       └── variables
 │   ├── dex
+│   ├── homepage
 │   ├── metrics-server
 │   ├── traefik
 │   └── vertical-pod-autoscaler
@@ -30,7 +31,7 @@
     ├── kube-prometheus-stack
     └── openebs
 
-23 directories
+24 directories
 ```
 <!-- readme-tree end -->
 
