@@ -4,9 +4,6 @@ metadata:
   name: vertical-pod-autoscaler
 spec:
   interval: 5m
-  dependsOn:
-    - name: metrics-server
-      namespace: kube-system
   install:
     crds: CreateReplace
   upgrade:

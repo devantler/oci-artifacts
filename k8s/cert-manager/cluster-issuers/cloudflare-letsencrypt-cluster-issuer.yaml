@@ -1,0 +1,19 @@
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: cloudflare-letsencrypt-cluster-issuer
+  namespace: cert-manager
+spec:
+  acme:
+    server: ${cloudflare_letsencrypt_cluster_issuer_server:=https://acme-staging-v02.api.letsencrypt.org/directory}
+    email: ${cloudflare_letsencrypt_cluster_issuer_email}
+    privateKeySecretRef:
+      name: cloudflare-letsencrypt-cluster-issuer-key
+    solvers:
+      - dns01:
+          cloudflare:
+            # ClusterIssuers look for secrets in the cert-manager namespace by default
+            # https://cert-manager.io/docs/configuration/#cluster-resource-namespace
+            apiTokenSecretRef:
+              name: cloudflare-dns-api-key
+              key: api-token
