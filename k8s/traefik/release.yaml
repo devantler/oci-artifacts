@@ -16,8 +16,6 @@ spec:
         name: traefik
   # https://github.com/traefik/traefik-helm-chart/blob/master/traefik/values.yaml
   values:
-    image:
-      tag: v3.0.0-beta3
     ports:
       web:
         redirectTo:
@@ -29,7 +27,7 @@ spec:
         defaultCertificate:
           secretName: cluster-issuer-certificate-tls
     service:
-      type: ${traefik_service_type:=LoadBalancer}
+      type: ${traefik_service_type:=ClusterIP}
       spec:
         loadBalancerIP: ${traefik_ingress_load_balancer_ip}
     ingressRoute:
