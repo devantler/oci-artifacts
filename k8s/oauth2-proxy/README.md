@@ -33,4 +33,8 @@ data:
     github_team="my-team1,my-team2" # restrict logins to members of a team
     github_repo="my-repo" # restrict logins to collaborators in a repository (formatted as "owner/repo")
     github_user="my-user1,my-user2" # restrict logins to specific users
+    reverse_proxy=true
+    upstreams=["static://202"]
+    skip_provider_button=true
+    cookie_domains=[".${cluster_domain}"]
 ```
