@@ -12,7 +12,8 @@
 ├── k8s
 │   ├── cert-manager
 │   │   ├── certificates
-│   │   └── cluster-issuers
+│   │   ├── cluster-issuers
+│   │   └── secrets
 │   ├── cloudflared
 │   ├── clusters
 │   │   └── oci-artifacts
@@ -26,14 +27,10 @@
 │   ├── traefik
 │   └── vertical-pod-autoscaler
 └── k8s-old
-    ├── flux-github-status-updater
-    ├── flux-webhook-receiver
-    │   ├── ingress-routes
-    │   └── secrets
     ├── kube-prometheus-stack
     └── openebs
 
-26 directories
+23 directories
 ```
 <!-- readme-tree end -->
 
