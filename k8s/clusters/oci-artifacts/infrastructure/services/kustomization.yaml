@@ -3,7 +3,9 @@ kind: Kustomization
 resources:
   - ../../../../cert-manager
   - ../../../../cloudflared
+  - ../../../../homepage
   - ../../../../metrics-server
+  - ../../../../oauth2-proxy
   - ../../../../traefik
   - ../../../../vertical-pod-autoscaler
-  - ../../../../homepage
+  - configmaps/oauth2-proxy-configmap.yaml
