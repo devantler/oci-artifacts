@@ -9,7 +9,7 @@ spec:
   sourceRef:
     kind: OCIRepository
     name: flux-system
-  path: clusters/oci-artifacts-ksail/variables
+  path: clusters/oci-artifacts/variables
   prune: true
   wait: true
   decryption:

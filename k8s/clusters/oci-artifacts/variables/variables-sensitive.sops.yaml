@@ -1,0 +1,28 @@
+# You need to encrypt this file with SOPS manually.
+# ksail sops --encrypt variables-sensitive.sops.yaml
+apiVersion: v1
+kind: Secret
+metadata:
+    name: variables-sensitive
+stringData:
+    cloudflared_tunnel_token: ENC[AES256_GCM,data:xpE54S2WE7skB56ub6jvydKR3BUWy3pGhaFcoiKe5RIsl9a8xFut6Ffmv3aHwpO0WtkE/7HTaNrdXomy3vf9i/VHUwJa+YMyPqr2kUzCEtavjcz4tLcpqe3Kehzm9Q1hTtT8KTOa8cCcntnGiplzty87BH+b/433J6N9CY2WQS1cSJ2Rsm3fACSl/tFpGsuwIaqOHgY4g53h7b8poVhqzJgX4kIoxgv8kJzpomlp2Dvp5/dtqW8IPg==,iv:Y7vPUxF2Z8RVAzbjAyZaIVx0UJthqVHUs/LQMhQeF6A=,tag:E7yyc8176aPZaNcRVG7fUw==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age120p4hfdjg4x84rcl50vaus77l6rvpqyfjw23lszcpa089asr4s4qrtytwd
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA4b283T2xvUVJKMXlxL2FB
+            MCtKdHAwOWVXcWtSWTRhWXR6VEkvYU9BUDBjCkJoenhhdjA4WjhYVlZFZ0JoQm85
+            dUxaVFYrU21XRmhValRHcVRWUTJ5RW8KLS0tIG50aVEraGJxN2x3YVBXNUl5TU9s
+            c0JORkV0cWlVd2dNeVNNcHdCUEtMdzQKMBixtc+K09cNAjnGPkXiMXpGNPydtkuW
+            a6xpX5+Jv7X/dLSaoiUme9tUt/lNG4/Iaib+iVfSJSCgikc7YZcvQg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2024-05-05T19:16:23Z"
+    mac: ENC[AES256_GCM,data:X2munRI0d2NbvQ5b04Vq8IPwhkK9+A2kjUpXFN400xSvF7Zhg5XGgaC1+5Pyf17U50npEg6+UUpdGKYjAeqPK0S/9TK83z3PArH97NkHotkAMWBE8/Tg++q+FU6Aln/bXVbUb94PS0ZJEVRs7Ffr5QKHw4hmSkaTQ0LtI2+ddCE=,iv:TTxay0UWJVt/xPr0ZGT4xI3baQiRYia66yrOf+r7heE=,tag:NJUIqXJWvP5FnJpts/aXiA==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.8.1
