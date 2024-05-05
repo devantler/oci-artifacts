@@ -10,7 +10,7 @@ spec:
   sourceRef:
     kind: OCIRepository
     name: flux-system
-  path: clusters/oci-artifacts-ksail/infrastructure/services
+  path: clusters/oci-artifacts/infrastructure/services
   prune: true
   wait: true
   decryption:
@@ -36,7 +36,7 @@ spec:
   sourceRef:
     kind: OCIRepository
     name: flux-system
-  path: clusters/oci-artifacts-ksail/infrastructure/configs
+  path: clusters/oci-artifacts/infrastructure/configs
   prune: true
   wait: true
   decryption:

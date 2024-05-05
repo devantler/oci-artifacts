@@ -1,10 +1,10 @@
 apiVersion: k3d.io/v1alpha5
 kind: Simple
 metadata:
-  name: oci-artifacts-ksail
+  name: oci-artifacts
 volumes:
-  - volume: k3d-oci-artifacts-ksail-storage:/var/lib/rancher/k3s/storage
-network: k3d-oci-artifacts-ksail
+  - volume: k3d-oci-artifacts-storage:/var/lib/rancher/k3s/storage
+network: k3d-oci-artifacts
 options:
   k3s:
     extraArgs:

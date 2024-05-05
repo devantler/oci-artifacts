@@ -15,7 +15,7 @@
 │   │   └── cluster-issuers
 │   ├── cloudflared
 │   ├── clusters
-│   │   └── oci-artifacts-ksail
+│   │   └── oci-artifacts
 │   │       ├── flux-system
 │   │       ├── infrastructure
 │   │       │   ├── configs
