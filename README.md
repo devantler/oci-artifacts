@@ -1,40 +1,102 @@
 # Welcome to Devantler's OCI Artifacts 🚀
 
+> [!NOTE]
+> This repo temporarily requires using https when referencing artifacts, as Kustomize does not support pulling from OCI yet. See [this PR](https://github.com/kubernetes-sigs/kustomize/pull/5147)
+
 <details>
   <summary>Show/Hide Folder Structure</summary>
 
 <!-- readme-tree start -->
 ```
-.
-├── .github
-│   └── workflows
-├── .vscode
-├── k8s
-│   ├── cert-manager
-│   │   ├── certificates
-│   │   ├── cluster-issuers
-│   │   └── secrets
-│   ├── cloudflared
-│   ├── clusters
-│   │   └── oci-artifacts
-│   │       ├── flux-system
-│   │       ├── infrastructure
-│   │       │   ├── configs
-│   │       │   └── services
-│   │       └── variables
-│   ├── dex
-│   ├── homepage
-│   ├── metrics-server
-│   ├── traefik
-│   └── vertical-pod-autoscaler
-└── k8s-old
-    ├── kube-prometheus-stack
-    └── openebs
-
-24 directories
 ```
 <!-- readme-tree end -->
 
 </details>
 
-This is an [OCI registry](https://opencontainers.org) with various different components for building and managing Kubernetes clusters. It uses [kustomize bases](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/#bases-and-overlays) for services and provides templating with [flux post-build variables](https://fluxcd.io/flux/components/kustomize/kustomizations/#post-build-variable-substitution), or full control with [kustomize patches](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/#customizing). As such, it provides a simple way to deploy services without the overhead of [Helm charts](https://helm.sh/docs/topics/charts/), and the complexity of writing your own Kubernetes manifests. However, it comes with the tradeoff of being less flexible than the helm charts in its templated setup, and as such it might not be suitable for all use cases in its current state. Feel free to open an issue or a PR if you require more helm values to be exposed, or if you have any other suggestions.
+This repository contains Kubernetes (K8s) manifests distributed as OCI Artifacts.
+
+- [Cert Manager](k8s/cert-manager/README.md)
+
+OCI Artifacts are a great way to distribute ready-to-use K8s manifests. It requires almost no lines of code to get services deployed, and together with Flux and Flux post-build variables it can be a great addition to Helm charts. In most cases deploying a service, will require a single line + setting some post-build variables. In more advanced scenarios it might require patching the OCI Artifact with Kustomize patches.
+
+## Requirements
+
+For testing locally:
+
+- [KSail](https://github.com/devantler/ksail)
+- [Docker](https://www.docker.com/)
+- Linux or MacOS
+
+For deploying the OCI Artifacts to a Kubernetes cluster:
+
+- A running Kubernetes cluster
+- Flux GitOps installed in the cluster
+
+## Usage
+
+This repository serves as the source-of-truth for the OCI Artifacts.
+
+### Reference an OCI Artifact with Kustomize
+
+> [!NOTE]
+> Pulling K8s manifest over OCI is not supported by Kustomize yet. There is [an active Pull Request](https://github.com/kubernetes-sigs/kustomize/pull/5147) that will add support for this. Until then, we can use Git over HTTP to reference the OCI Artifact.
+
+To reference an OCI Artifact with Kustomize, you need to add the following to your `kustomization.yaml` files that you want to reference the OCI Artifact and its configurations from:
+
+```yaml
+# Service deployments
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  # To reference a service you use the following syntax:
+  - https://[token]@github.com/energinet-digitalisering/oci-artifacts//k8s/[serviceName]?ref=[refName]
+
+---
+# Config deployments
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  # To reference a config you use the following syntax:
+  - https://[token]@raw.githubusercontent.com/energinet-digitalisering/oci-artifacts/[refName]/k8s/[serviceName]/[pathToConfigYamlFile]
+```
+
+Where `[token]` is the Personal Access Token you create to enable access to the OCI Artifacts repo, `[serviceName]` is the name of the OCI Artifact you want to reference, and `[refName]` is the name of the branch or tag you want to pull the OCI Artifact from. If you want to reference a config file, you also need to specify the [pathToConfigYamlFile] which is the path to the yaml file relative to the OCI Artifact folder. For example `cert-manager/certificates/cluster-issuer-certificate.yaml`, if you want to pull the cluster issuer certificate provided by the cert-manager OCI Artifact
+
+### Setting variables for OCI Artifacts
+
+Some of the OCI Artifacts require you to provide some variables to configure the service. You can do this by adding the variables to your variables files in the `k8s/clusters/[clusterName]/variables` folder in your own clusters repo. As the references are http, you can fairly easily decode where to look for the possible variables. For example, if you want to reference the `traefik` service, you can find the variables in the `k8s/traefik/*.yaml` files in this repository.
+
+### Patching OCI Artifacts
+
+Some OCI Artifacts might not meet your expectations out-of-the-box. In this case, you can patch the OCI Artifact by adding patches to your `kustomization.yaml` file that references the OCI Artifact. For example, if you want to patch the `traefik` service, you would add the following to your `kustomization.yaml` file:
+
+```yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  # To reference a service you use the following syntax:
+  - https://[token]@github.com/energinet-digitalisering/oci-artifacts//k8s/traefik?ref=v0.0.3
+
+patches:
+  # To patch a service with a patch file you use the following syntax:
+  - path: traefik-patch.yaml
+    target:
+      kind: HelmRelease
+      name: traefik
+      namespace: traefik
+  # To inline patch a service you use the following syntax:
+  - patch: |-
+      - op: replace
+        path: /some/existing/path
+        value: new value
+    target:
+      kind: HelmRelease
+      name: traefik
+      namespace: traefik
+```
+
+This allows you full control over the OCI Artifacts, but if you require a lot of patches, you might want to consider contributing to the OCI Artifact to make it more flexible, or copying the OCI Artifact into your own clusters repo and configure it there.
+
+## Contributing
+
+The OCI Artifacts repo is open source, and I welcome contributions from anyone. If you want to contribute, please create issues or pull requests in this repository and I will take a look at it.
