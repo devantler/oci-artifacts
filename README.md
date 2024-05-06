@@ -8,6 +8,35 @@
 
 <!-- readme-tree start -->
 ```
+.
+├── .github
+│   └── workflows
+├── .vscode
+├── k8s
+│   ├── cert-manager
+│   │   ├── certificates
+│   │   ├── cluster-issuers
+│   │   └── secrets
+│   ├── cloudflared
+│   ├── clusters
+│   │   └── oci-artifacts
+│   │       ├── flux-system
+│   │       ├── infrastructure
+│   │       │   ├── configs
+│   │       │   └── services
+│   │       │       └── configmaps
+│   │       └── variables
+│   ├── dex
+│   ├── homepage
+│   ├── metrics-server
+│   ├── oauth2-proxy
+│   ├── traefik
+│   └── vertical-pod-autoscaler
+└── k8s-old
+    ├── kube-prometheus-stack
+    └── openebs
+
+26 directories
 ```
 <!-- readme-tree end -->
 
