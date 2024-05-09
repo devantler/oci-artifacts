@@ -33,3 +33,6 @@ spec:
         encrKeysDir: /var/home/keys
     mayastor:
       nodeSelector: {}
+      io_engine:
+        nodeSelector:
+          openebs.io/engine: mayastor
