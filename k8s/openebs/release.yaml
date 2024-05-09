@@ -22,3 +22,4 @@ spec:
     zfs-localpv:
       zfsNode:
         encrKeysDir: /var/home/keys
+    nodeSelector: {}
