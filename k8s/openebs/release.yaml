@@ -20,19 +20,9 @@ spec:
   # https://github.com/openebs/openebs/blob/main/charts/values.yaml
   values:
     engines:
-      local:
-        lvm:
-          enabled: true
-        zfs:
-          enabled: true
       replicated:
         mayastor:
-          enabled: true
+          enabled: false
     zfs-localpv:
       zfsNode:
         encrKeysDir: /var/home/keys
-    mayastor:
-      nodeSelector: {}
-      io_engine:
-        nodeSelector:
-          openebs.io/engine: mayastor
