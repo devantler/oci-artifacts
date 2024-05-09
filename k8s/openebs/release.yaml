@@ -18,4 +18,6 @@ spec:
         kind: HelmRepository
         name: openebs
   # https://github.com/openebs/openebs/blob/main/charts/values.yaml
-  values: {}
+  values:
+    zfs-localpv:
+      enabled: false
