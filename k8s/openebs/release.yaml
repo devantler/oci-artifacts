@@ -27,7 +27,7 @@ spec:
           enabled: true
       replicated:
         mayastor:
-          enabled: false
+          enabled: true
     zfs-localpv:
       zfsNode:
         encrKeysDir: /var/home/keys
