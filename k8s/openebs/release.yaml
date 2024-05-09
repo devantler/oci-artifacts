@@ -20,4 +20,5 @@ spec:
   # https://github.com/openebs/openebs/blob/main/charts/values.yaml
   values:
     zfs-localpv:
-      enabled: false
+      zfsNode:
+        encrKeysDir: /var/home/keys
