@@ -19,6 +19,15 @@ spec:
         name: openebs
   # https://github.com/openebs/openebs/blob/main/charts/values.yaml
   values:
+    engines:
+      local:
+        lvm:
+          enabled: true
+        zfs:
+          enabled: true
+      replicated:
+        mayastor:
+          enabled: false
     zfs-localpv:
       zfsNode:
         encrKeysDir: /var/home/keys
