@@ -12,3 +12,4 @@ metadata:
   name: gha-runner-scale-set-controller
   labels:
     goldilocks.fairwinds.com/enabled: "true"
+    goldilocks.fairwinds.com/vpa-update-mode: "auto"
