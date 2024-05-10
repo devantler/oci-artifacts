@@ -5,10 +5,10 @@ resources:
   - ../../../cloudflared
   - ../../../dex
   - ../../../gha-runner-scale-set
+  - ../../../goldilocks
   - ../../../homepage
   - ../../../metrics-server
   - ../../../oauth2-proxy
   - ../../../openebs
   - ../../../traefik
-  - ../../../vertical-pod-autoscaler
   - configmaps/oauth2-proxy-configmap.yaml
