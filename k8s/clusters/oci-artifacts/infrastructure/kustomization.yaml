@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   - ../../../../cert-manager
   - ../../../../cloudflared
+  - ../../../../gha-runner-scale-set
   - ../../../../homepage
   - ../../../../metrics-server
   - ../../../../oauth2-proxy
