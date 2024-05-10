@@ -4,8 +4,11 @@ metadata:
   name: gha-runner-scale-set
   labels:
     pod-security.kubernetes.io/enforce: privileged
+    goldilocks.fairwinds.com/enabled: "true"
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
   name: gha-runner-scale-set-controller
+  labels:
+    goldilocks.fairwinds.com/enabled: "true"
