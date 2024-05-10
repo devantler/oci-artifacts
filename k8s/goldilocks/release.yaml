@@ -16,4 +16,11 @@ spec:
         kind: HelmRepository
         name: goldilocks
   # https://github.com/FairwindsOps/charts/blob/master/stable/goldilocks/values.yaml
-  values: {}
+  values:
+    ingress:
+      enabled: true
+      hosts:
+        - host: goldilocks.${cluster_domain}
+          paths:
+            - path: /
+              type: ImplementationSpecific
