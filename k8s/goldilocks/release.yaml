@@ -17,10 +17,11 @@ spec:
         name: goldilocks
   # https://github.com/FairwindsOps/charts/blob/master/stable/goldilocks/values.yaml
   values:
-    ingress:
-      enabled: true
-      hosts:
-        - host: goldilocks.${cluster_domain}
-          paths:
-            - path: /
-              type: ImplementationSpecific
+    dashboard:
+      ingress:
+        enabled: true
+        hosts:
+          - host: goldilocks.${cluster_domain}
+            paths:
+              - path: /
+                type: ImplementationSpecific
