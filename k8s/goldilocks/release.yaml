@@ -8,6 +8,9 @@ spec:
     crds: CreateReplace
   upgrade:
     crds: CreateReplace
+  dependsOn:
+    - name: vertical-pod-autoscaler
+      namespace: vertical-pod-autoscaler
   chart:
     spec:
       chart: goldilocks
@@ -17,10 +20,6 @@ spec:
         name: goldilocks
   # https://github.com/FairwindsOps/charts/blob/master/stable/goldilocks/values.yaml
   values:
-    vpa:
-      enabled: true
-      updater:
-        enabled: true
     dashboard:
       replicaCount: 1
       ingress:

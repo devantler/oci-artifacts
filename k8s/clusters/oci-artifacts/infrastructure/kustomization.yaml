@@ -11,4 +11,5 @@ resources:
   - ../../../oauth2-proxy
   - ../../../openebs
   - ../../../traefik
+  - ../../../vertical-pod-autoscaler
   - configmaps/oauth2-proxy-configmap.yaml
