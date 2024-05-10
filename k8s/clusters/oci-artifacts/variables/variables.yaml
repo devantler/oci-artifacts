@@ -6,3 +6,4 @@ data:
   cluster_domain: oci-artifacts.k8s.local
   cluster_issuer_name: selfsigned-cluster-issuer
   oauth2_proxy_client_id: Ov23liQ4UtmGpfwiYpSZ
+  github_config_url: https://github.com/devantler/homelab

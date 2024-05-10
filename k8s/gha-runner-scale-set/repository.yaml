@@ -2,6 +2,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
   name: gha-runner-scale-set
+  namespace: gha-runner-scale-set
 spec:
   type: oci
   interval: 5m
