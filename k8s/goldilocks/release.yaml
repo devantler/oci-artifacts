@@ -8,9 +8,6 @@ spec:
     crds: CreateReplace
   upgrade:
     crds: CreateReplace
-  dependsOn:
-    - name: vertical-pod-autoscaler
-      namespace: vertical-pod-autoscaler
   chart:
     spec:
       chart: goldilocks
@@ -29,3 +26,9 @@ spec:
             paths:
               - path: /
                 type: ImplementationSpecific
+    vpa:
+      enabled: true
+      updater:
+        enabled: true
+        extraArgs:
+          min-replicas: 1
