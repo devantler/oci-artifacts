@@ -4,4 +4,4 @@ metadata:
   name: dex
   labels:
     goldilocks.fairwinds.com/enabled: "true"
-    goldilocks.fairwinds.com/vpa-update-mode: "recreate"
+    goldilocks.fairwinds.com/vpa-update-mode: "auto"
