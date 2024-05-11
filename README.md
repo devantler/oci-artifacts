@@ -12,31 +12,29 @@
 ├── .github
 │   └── workflows
 ├── .vscode
-├── k8s
-│   ├── cert-manager
-│   │   ├── certificates
-│   │   ├── cluster-issuers
-│   │   └── secrets
-│   ├── cloudflared
-│   ├── clusters
-│   │   └── oci-artifacts
-│   │       ├── flux-system
-│   │       ├── infrastructure
-│   │       │   ├── configs
-│   │       │   └── services
-│   │       │       └── configmaps
-│   │       └── variables
-│   ├── dex
-│   ├── homepage
-│   ├── metrics-server
-│   ├── oauth2-proxy
-│   ├── traefik
-│   └── vertical-pod-autoscaler
-└── k8s-old
-    ├── kube-prometheus-stack
-    └── openebs
+└── k8s
+    ├── cert-manager
+    │   ├── certificates
+    │   ├── cluster-issuers
+    │   └── secrets
+    ├── cloudflared
+    ├── clusters
+    │   └── oci-artifacts
+    │       ├── crds
+    │       ├── flux-system
+    │       ├── infrastructure
+    │       │   └── configmaps
+    │       └── variables
+    ├── dex
+    ├── gha-runner-scale-set
+    ├── goldilocks
+    ├── homepage
+    ├── metrics-server
+    ├── oauth2-proxy
+    ├── openebs
+    └── traefik
 
-26 directories
+24 directories
 ```
 <!-- readme-tree end -->
 
