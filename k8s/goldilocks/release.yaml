@@ -31,6 +31,6 @@ spec:
       updater:
         enabled: true
         extraArgs:
-          min-replicas: 1
+          min-replicas: 2
         image:
-          tag: 1.0.0
+          tag: "1.0.0"
