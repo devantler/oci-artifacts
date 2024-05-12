@@ -3,3 +3,11 @@ kind: Kustomization
 namespace: kubelet-serving-cert-approver
 resources:
   - https://raw.githubusercontent.com/alex1989hu/kubelet-serving-cert-approver/main/deploy/standalone-install.yaml
+
+patches:
+  - path: namespace-patch.yaml
+    target:
+      kind: Namespace
+      name: kubelet-serving-cert-approver
+      namespace: kubelet-serving-cert-approver
+
