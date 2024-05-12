@@ -18,7 +18,7 @@ spec:
   # https://github.com/FairwindsOps/charts/blob/master/stable/goldilocks/values.yaml
   values:
     dashboard:
-      replicaCount: ${goldilocks_replica_count:=2}
+      replicaCount: ${goldilocks_replica_count:=1}
       ingress:
         enabled: true
         hosts:
@@ -31,6 +31,6 @@ spec:
       updater:
         enabled: true
         extraArgs:
-          min-replicas: 2
+          min-replicas: 1
         image:
           tag: "1.0.0"
