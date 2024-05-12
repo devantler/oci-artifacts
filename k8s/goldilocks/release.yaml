@@ -30,5 +30,5 @@ spec:
       enabled: true
       updater:
         enabled: true
-        extraArgs:
-          min-replicas: 1
+        # extraArgs:
+        #   min-replicas: 1
