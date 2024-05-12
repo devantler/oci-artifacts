@@ -32,3 +32,5 @@ spec:
         enabled: true
         extraArgs:
           min-replicas: 2
+        image:
+          tag: 1.1.1
