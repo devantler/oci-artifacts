@@ -86,7 +86,7 @@ To reference an OCI Artifact with Kustomize, you need to add the following to yo
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  # To reference a service you use the following syntax:
+  # To reference a folder you use the following syntax:
   - https://[token]@github.com/devantler/oci-artifacts//k8s/[serviceName]?ref=[refName]
 
 ---
@@ -94,7 +94,7 @@ resources:
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  # To reference a config you use the following syntax:
+  # To reference a single file you use the following syntax:
   - https://[token]@raw.githubusercontent.com/devantler/oci-artifacts/[refName]/k8s/[serviceName]/[pathToConfigYamlFile]
 ```
 
