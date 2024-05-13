@@ -87,7 +87,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   # To reference a folder you use the following syntax:
-  - https://[token]@github.com/devantler/oci-artifacts//k8s/[serviceName]?ref=[refName]
+  - https://github.com/devantler/oci-artifacts//k8s/[serviceName]?ref=[refName]
 
 ---
 # Deploying single files
@@ -95,10 +95,10 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   # To reference a single file you use the following syntax:
-  - https://[token]@raw.githubusercontent.com/devantler/oci-artifacts/[refName]/k8s/[serviceName]/[pathToConfigYamlFile]
+  - https://raw.githubusercontent.com/devantler/oci-artifacts/[refName]/k8s/[serviceName]/[pathToYamlFile]
 ```
 
-Where `[token]` is the Personal Access Token you create to enable access to the OCI Artifacts repo, `[serviceName]` is the name of the OCI Artifact you want to reference, and `[refName]` is the name of the branch or tag you want to pull the OCI Artifact from. If you want to reference a config file, you also need to specify the [pathToConfigYamlFile] which is the path to the yaml file relative to the OCI Artifact folder. For example `cert-manager/certificates/cluster-issuer-certificate.yaml`, if you want to pull the cluster issuer certificate provided by the cert-manager OCI Artifact
+Where `[serviceName]` is the name of the OCI Artifact you want to reference, and `[refName]` is the name of the branch or tag you want to pull the OCI Artifact from. If you want to reference a single file, you also need to specify the [pathToYamlFile] which is the path to the yaml file relative to the OCI Artifact folder. For example `cert-manager/certificates/cluster-issuer-certificate.yaml`, if you want to pull the cluster issuer certificate provided by the cert-manager OCI Artifact
 
 ### Setting variables for OCI Artifacts
 
