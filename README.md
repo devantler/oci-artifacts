@@ -25,6 +25,7 @@
     │       ├── infrastructure
     │       │   └── configmaps
     │       └── variables
+    ├── crossplane
     ├── dex
     ├── gha-runner-scale-set
     ├── goldilocks
@@ -35,7 +36,7 @@
     ├── openebs
     └── traefik
 
-25 directories
+26 directories
 ```
 <!-- readme-tree end -->
 
