@@ -82,7 +82,7 @@ For deploying the OCI Artifacts to a Kubernetes cluster:
 To reference an OCI Artifact with Kustomize, you need to add the following to your `kustomization.yaml` files that you want to reference the OCI Artifact and its configurations from:
 
 ```yaml
-# Service deployments
+# Deploying folders
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
@@ -90,7 +90,7 @@ resources:
   - https://[token]@github.com/devantler/oci-artifacts//k8s/[serviceName]?ref=[refName]
 
 ---
-# Config deployments
+# Deploying single files
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
