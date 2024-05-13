@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   - ../../../cert-manager
   - ../../../cloudflared
+  - ../../../crossplane
   - ../../../dex
   - ../../../gha-runner-scale-set
   - ../../../goldilocks
