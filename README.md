@@ -74,8 +74,6 @@ For deploying the OCI Artifacts to a Kubernetes cluster:
 
 ## Usage
 
-This repository serves as the source-of-truth for the OCI Artifacts.
-
 ### Reference an OCI Artifact with Kustomize
 
 > [!NOTE]
