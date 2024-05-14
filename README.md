@@ -50,10 +50,13 @@ This repository contains Kubernetes (K8s) manifests distributed as OCI Artifacts
 - [Dex](k8s/dex/README.md)
 - [GitHub Actions Runner Scale Set](k8s/gha-runner-scale-set/README.md)
 - [Goldilocks](k8s/goldilocks/README.md)
+- [Harbor](k8s/harbor/README.md)
+- [Helm Charts OCI Proxy](k8s/helm-charts-oci-proxy/README.md)
 - [Homepage](k8s/homepage/README.md)
 - [Kubelet Serving Cert Approver](k8s/kubelet-serving-cert-approver/README.md)
 - [Metrics Server](k8s/metrics-server/README.md)
 - [OAuth2 Proxy](k8s/oauth2-proxy/README.md)
+- [Pulumi Operator](k8s/pulumi-operator/README.md)
 - [OpenEBS](k8s/openebs/README.md)
 - [Traefik](k8s/traefik/README.md)
 
