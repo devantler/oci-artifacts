@@ -29,14 +29,17 @@
     ├── dex
     ├── gha-runner-scale-set
     ├── goldilocks
+    ├── harbor
+    ├── helm-charts-oci-proxy
     ├── homepage
     ├── kubelet-serving-cert-approver
     ├── metrics-server
     ├── oauth2-proxy
     ├── openebs
+    ├── pulumi-operator
     └── traefik
 
-26 directories
+29 directories
 ```
 <!-- readme-tree end -->
 
