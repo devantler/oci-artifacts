@@ -4,9 +4,3 @@ Transparently proxy and transform Chart Repository styled Helm Charts as OCI art
 
 - [Documentation](https://doc.traefik.io/traefik/)
 - [Helm Chart](https://github.com/traefik/traefik-helm-chart)
-
-## Post-build variables
-
-| Variable                             | Description                                | Default                       | Required |
-| ------------------------------------ | ------------------------------------------ | ----------------------------- | -------- |
-| chartsproxy_image_registry | The OCI registry where the image is stored | 8gears.container-registry.com | ✕        |
