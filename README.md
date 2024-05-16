@@ -1,8 +1,5 @@
 # Welcome to Devantler's OCI Artifacts 🚀
 
-> [!NOTE]
-> This repo temporarily requires using https when referencing artifacts, as Kustomize does not support pulling from OCI yet. See [this PR](https://github.com/kubernetes-sigs/kustomize/pull/5147)
-
 <details>
   <summary>Show/Hide Folder Structure</summary>
 
