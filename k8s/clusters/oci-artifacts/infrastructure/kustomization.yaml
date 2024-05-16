@@ -12,6 +12,7 @@ resources:
   - ../../../homepage
   - ../../../kubelet-serving-cert-approver
   - ../../../metrics-server
+  - ../../../minio
   - ../../../oauth2-proxy
   - ../../../openebs
   - ../../../pulumi-operator
