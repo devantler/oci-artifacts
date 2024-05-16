@@ -15,5 +15,6 @@ resources:
   - ../../../oauth2-proxy
   - ../../../openebs
   - ../../../pulumi-operator
+  - ../../../rook-ceph
   - ../../../traefik
   - configmaps/oauth2-proxy-configmap.yaml
