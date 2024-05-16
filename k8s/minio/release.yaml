@@ -29,7 +29,7 @@ spec:
   upgrade:
     crds: CreateReplace
   dependsOn:
-    - name: minio
+    - name: minio-operator
   chart:
     spec:
       chart: tenant
