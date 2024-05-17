@@ -23,5 +23,4 @@ spec:
         name: variables
       - kind: Secret
         name: variables-sensitive
----
 

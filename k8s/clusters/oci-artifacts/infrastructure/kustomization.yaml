@@ -13,7 +13,7 @@ resources:
   - ../../../kubelet-serving-cert-approver
   - ../../../metrics-server
   - ../../../oauth2-proxy
-  - ../../../openebs
   - ../../../pulumi-operator
+  - ../../../rook-ceph
   - ../../../traefik
   - configmaps/oauth2-proxy-configmap.yaml
