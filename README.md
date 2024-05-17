@@ -4,7 +4,6 @@
   <summary>Show/Hide Folder Structure</summary>
 
 <!-- readme-tree start -->
-
 ```
 .
 ├── .github
@@ -33,13 +32,12 @@
     ├── kubelet-serving-cert-approver
     ├── metrics-server
     ├── oauth2-proxy
-    ├── openebs
     ├── pulumi-operator
+    ├── rook-ceph
     └── traefik
 
 29 directories
 ```
-
 <!-- readme-tree end -->
 
 </details>
