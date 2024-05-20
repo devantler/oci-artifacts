@@ -48,6 +48,11 @@ spec:
     csiCephFSPluginResource: ""
     csiNFSProvisionerResource: ""
     csiNFSPluginResource: ""
+    cephClusterSpec:
+      mon:
+        allowMultiplePerNode: true
+      mgr:
+        allowMultiplePerNode: true
     ingress:
       dashboard:
         host:
