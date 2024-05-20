@@ -42,6 +42,12 @@ spec:
   # https://github.com/rook/rook/blob/release-1.14/deploy/charts/rook-ceph-cluster/values.yaml
   values:
     enableDiscoveryDaemon: ${rook_ceph_cluster_enable_discovery_daemon:=true}
+    csiRBDProvisionerResource: ""
+    csiRBDPluginResource: ""
+    csiCephFSProvisionerResource: ""
+    csiCephFSPluginResource: ""
+    csiNFSProvisionerResource: ""
+    csiNFSPluginResource: ""
     ingress:
       dashboard:
         host:
