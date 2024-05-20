@@ -4,6 +4,8 @@ Rook is an open-source cloud-native storage orchestrator for Kubernetes, providi
 
 ## Post-build variables
 
-| Variable                                  | Description                                 | Default | Required |
-| ----------------------------------------- | ------------------------------------------- | :-----: | :------: |
-| rook_ceph_cluster_enable_discovery_daemon | Whether to enable the Ceph discovery daemon |  true   |    ✕     |
+| Variable                                      | Description                                      | Default | Required |
+| --------------------------------------------- | ------------------------------------------------ | :-----: | :------: |
+| rook_ceph_cluster_enable_discovery_daemon     | Whether to enable the Ceph discovery daemon      |  true   |    ✕     |
+| rook_ceph_cluster_mon_allow_multiple_per_node | Whether to allow multiple Ceph monitors per node |  true   |    ✕     |
+| rook_ceph_cluster_mgr_allow_multiple_per_node | Whether to allow multiple Ceph managers per node |  true   |    ✕     |

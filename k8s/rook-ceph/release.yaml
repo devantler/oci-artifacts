@@ -50,9 +50,9 @@ spec:
     csiNFSPluginResource: ""
     cephClusterSpec:
       mon:
-        allowMultiplePerNode: true
+        allowMultiplePerNode: ${rook_ceph_cluster_mon_allow_multiple_per_node:=true}
       mgr:
-        allowMultiplePerNode: true
+        allowMultiplePerNode: ${rook_ceph_cluster_mgr_allow_multiple_per_node:=true}
     ingress:
       dashboard:
         host:
