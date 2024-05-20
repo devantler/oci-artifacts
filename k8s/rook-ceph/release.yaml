@@ -39,11 +39,11 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: rook-ceph
-  # https://github.com/rook/rook/blob/release-1.14/deploy/charts/rook-ceph/values.yaml
+  # https://github.com/rook/rook/blob/release-1.14/deploy/charts/rook-ceph-cluster/values.yaml
   values:
     enableDiscoveryDaemon: ${rook_ceph_cluster_enable_discovery_daemon:=true}
     ingress:
       dashboard:
         host:
-          name: rook-ceph.${cluster_domain}
+          name: ceph.${cluster_domain}
           path: "/ceph-dashboard(/|$)(.*)"
