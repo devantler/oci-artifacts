@@ -48,11 +48,13 @@ spec:
     csiCephFSPluginResource: ""
     csiNFSProvisionerResource: ""
     csiNFSPluginResource: ""
+
     cephClusterSpec:
       mon:
         allowMultiplePerNode: ${rook_ceph_cluster_mon_allow_multiple_per_node:=true}
       mgr:
         allowMultiplePerNode: ${rook_ceph_cluster_mgr_allow_multiple_per_node:=true}
+
     cephBlockPools:
       - name: ceph-blockpool
         # see https://github.com/rook/rook/blob/master/Documentation/CRDs/Block-Storage/ceph-block-pool-crd.md#spec for available configuration
@@ -60,6 +62,26 @@ spec:
           failureDomain: host
           replicated:
             size: ${rook_ceph_cluster_ceph_blockpool_replicated_size:=1}
+        storageClass:
+          enabled: true
+          name: ceph-block
+          isDefault: true
+          reclaimPolicy: Delete
+          allowVolumeExpansion: true
+          volumeBindingMode: "Immediate"
+          mountOptions: []
+          allowedTopologies: []
+          parameters:
+            imageFormat: "2"
+            imageFeatures: layering
+            csi.storage.k8s.io/provisioner-secret-name: rook-csi-rbd-provisioner
+            csi.storage.k8s.io/provisioner-secret-namespace: "{{ .Release.Namespace }}"
+            csi.storage.k8s.io/controller-expand-secret-name: rook-csi-rbd-provisioner
+            csi.storage.k8s.io/controller-expand-secret-namespace: "{{ .Release.Namespace }}"
+            csi.storage.k8s.io/node-stage-secret-name: rook-csi-rbd-node
+            csi.storage.k8s.io/node-stage-secret-namespace: "{{ .Release.Namespace }}"
+            csi.storage.k8s.io/fstype: ext4
+
     ingress:
       dashboard:
         host:
