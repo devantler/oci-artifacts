@@ -53,6 +53,13 @@ spec:
         allowMultiplePerNode: ${rook_ceph_cluster_mon_allow_multiple_per_node:=true}
       mgr:
         allowMultiplePerNode: ${rook_ceph_cluster_mgr_allow_multiple_per_node:=true}
+    cephBlockPools:
+      - name: ceph-blockpool
+        # see https://github.com/rook/rook/blob/master/Documentation/CRDs/Block-Storage/ceph-block-pool-crd.md#spec for available configuration
+        spec:
+          failureDomain: host
+          replicated:
+            size: ${rook_ceph_cluster_ceph_blockpool_replicated_size:=1}
     ingress:
       dashboard:
         host:
