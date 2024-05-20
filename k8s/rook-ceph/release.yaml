@@ -4,10 +4,11 @@ metadata:
   name: rook-ceph
 spec:
   interval: 5m
-  install:
-    crds: CreateReplace
-  upgrade:
-    crds: CreateReplace
+  # This Helm Chart supports creating and updating CRDs. So we do not need to manage them with Flux.
+  # install:
+  #   crds: CreateReplace
+  # upgrade:
+  #   crds: CreateReplace
   chart:
     spec:
       chart: rook-ceph
@@ -16,12 +17,7 @@ spec:
         kind: HelmRepository
         name: rook-ceph
   # https://github.com/rook/rook/blob/release-1.14/deploy/charts/rook-ceph/values.yaml
-  values:
-    ingress:
-      dashboard:
-        host:
-          name: rook-ceph.${cluster_domain}
-          path: "/ceph-dashboard(/|$)(.*)"
+  values: {}
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -46,3 +42,8 @@ spec:
   # https://github.com/rook/rook/blob/release-1.14/deploy/charts/rook-ceph/values.yaml
   values:
     enableDiscoveryDaemon: ${rook_ceph_cluster_enable_discovery_daemon:=true}
+    ingress:
+      dashboard:
+        host:
+          name: rook-ceph.${cluster_domain}
+          path: "/ceph-dashboard(/|$)(.*)"
