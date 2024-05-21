@@ -11,26 +11,14 @@ spec:
   chart:
     spec:
       chart: harbor
-      version: 1.14.2
+      version: 2.10.2
       sourceRef:
         kind: HelmRepository
         name: harbor
-  # https://github.com/goharbor/harbor-helm/blob/main/values.yaml
+  # https://github.com/bitnami/charts/blob/main/bitnami/harbor/values.yaml
   values:
     externalURL: https://harbor.${cluster_domain}
-    harborAdminPassword: ${harbor_admin_password:=Harbor12345}
-    expose:
-      tls:
-        certSource: none
-      ingress:
-        hosts:
-          core: harbor.${cluster_domain}
-    persistence:
-      persistentVolumeClaim:
-        registry:
-          storageClass: ${harbor_storage_class:=}
-          accessMode: ${harbor_storage_access_mode:=ReadWriteOnce}
-        jobservice:
-          jobLog:
-            storageClass: ${harbor_storage_class:=}
-            accessMode: ${harbor_storage_access_mode:=ReadWriteOnce}
+    adminPassword: ${harbor_admin_password:=Harbor12345}
+    ingress:
+      core:
+        hostname: harbor.${cluster_domain}
