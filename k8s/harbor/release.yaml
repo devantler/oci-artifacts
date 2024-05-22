@@ -23,3 +23,7 @@ spec:
       core:
         hostname: harbor.${cluster_domain}
     exposureType: ingress
+    jobservice:
+      updateStrategy: Recreate
+    registry:
+      updateStrategy: Recreate
