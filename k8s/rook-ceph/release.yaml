@@ -46,3 +46,4 @@ spec:
       dashboard:
         host:
           name: ceph.${cluster_domain}
+          path: "/ceph-dashboard(/|$)(.*)"
