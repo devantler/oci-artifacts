@@ -20,3 +20,18 @@ spec:
     zfs-localpv:
       zfsNode:
         encrKeysDir: /var/home/keys
+    mayastor:
+      loki-stack:
+        loki:
+          initContainers:
+            - command: ["/bin/bash", "-ec", "chown -R 1001:1001 /data"]
+              image: docker.io/bitnami/os-shell:latest
+              imagePullPolicy: IfNotPresent
+              name: volume-permissions
+              securityContext:
+                runAsUser: 0
+              terminationMessagePath: /dev/termination-log
+              terminationMessagePolicy: File
+              volumeMounts:
+                - mountPath: /data
+                  name: storage
