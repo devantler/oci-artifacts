@@ -22,3 +22,4 @@ spec:
     ingress:
       core:
         hostname: harbor.${cluster_domain}
+    exposureType: ingress
