@@ -28,6 +28,10 @@ spec:
             registry: docker.io
             repository: bitnami/os-shell
             tag: latest
+        image:
+          registry: docker.io
+          repository: bitnami/etcd
+          tag: latest
       loki-stack:
         loki:
           initContainers:
