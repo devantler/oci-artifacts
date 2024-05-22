@@ -21,6 +21,13 @@ spec:
       zfsNode:
         encrKeysDir: /var/home/keys
     mayastor:
+      etcd:
+        volumePermissions:
+          enabled: true
+          image:
+            registry: docker.io
+            repository: bitnami/os-shell
+            tag: latest
       loki-stack:
         loki:
           initContainers:
