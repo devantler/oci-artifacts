@@ -4,4 +4,5 @@ metadata:
   name: harbor
 spec:
   interval: 5m
-  url: https://helm.goharbor.io
+  url: oci://registry-1.docker.io/bitnamicharts
+  type: "oci"
