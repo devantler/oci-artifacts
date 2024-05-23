@@ -4,6 +4,10 @@ metadata:
   name: longhorn
 spec:
   interval: 5m
+  install:
+    crds: CreateReplace
+  upgrade:
+    crds: CreateReplace
   chart:
     spec:
       chart: longhorn
