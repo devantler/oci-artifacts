@@ -62,6 +62,7 @@ This repository contains Kubernetes (K8s) manifests distributed as OCI Artifacts
 - [Metrics Server](k8s/metrics-server/README.md)
 - [OAuth2 Proxy](k8s/oauth2-proxy/README.md)
 - [Pulumi Operator](k8s/pulumi-operator/README.md)
+- [Reloader](k8s/reloader/README.md)
 - [Traefik](k8s/traefik/README.md)
 
 OCI Artifacts are a great way to distribute ready-to-use K8s manifests. It requires almost no lines of code to get services deployed, and together with Flux and Flux post-build variables it can be a great addition to Helm charts. In most cases deploying a service, will require a single line + setting some post-build variables. In more advanced scenarios it might require patching the OCI Artifact with Kustomize patches.
