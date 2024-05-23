@@ -4,7 +4,6 @@
   <summary>Show/Hide Folder Structure</summary>
 
 <!-- readme-tree start -->
-
 ```
 .
 ├── .github
@@ -34,14 +33,12 @@
     ├── longhorn
     ├── metrics-server
     ├── oauth2-proxy
-    ├── openebs
     ├── pulumi-operator
-    ├── rook-ceph
+    ├── reloader
     └── traefik
 
-31 directories
+30 directories
 ```
-
 <!-- readme-tree end -->
 
 </details>
