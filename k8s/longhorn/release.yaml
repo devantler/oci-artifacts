@@ -11,5 +11,5 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: longhorn
-  # https://github.com/rook/rook/blob/release-1.14/deploy/charts/rook-ceph/values.yaml
+  # https://github.com/longhorn/charts/blob/v1.6.x/charts/longhorn/values.yaml
   values: {}
