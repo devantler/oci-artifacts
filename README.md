@@ -4,6 +4,7 @@
   <summary>Show/Hide Folder Structure</summary>
 
 <!-- readme-tree start -->
+
 ```
 .
 ├── .github
@@ -40,6 +41,7 @@
 
 31 directories
 ```
+
 <!-- readme-tree end -->
 
 </details>
@@ -56,11 +58,10 @@ This repository contains Kubernetes (K8s) manifests distributed as OCI Artifacts
 - [Helm Charts OCI Proxy](k8s/helm-charts-oci-proxy/README.md)
 - [Homepage](k8s/homepage/README.md)
 - [Kubelet Serving Cert Approver](k8s/kubelet-serving-cert-approver/README.md)
+- [Longhorn](k8s/longhorn/README.md)
 - [Metrics Server](k8s/metrics-server/README.md)
-- [MinIO](k8s/minio/README.md)
 - [OAuth2 Proxy](k8s/oauth2-proxy/README.md)
 - [Pulumi Operator](k8s/pulumi-operator/README.md)
-- [Rook-Ceph](k8s/rook-ceph/README.md)
 - [Traefik](k8s/traefik/README.md)
 
 OCI Artifacts are a great way to distribute ready-to-use K8s manifests. It requires almost no lines of code to get services deployed, and together with Flux and Flux post-build variables it can be a great addition to Helm charts. In most cases deploying a service, will require a single line + setting some post-build variables. In more advanced scenarios it might require patching the OCI Artifact with Kustomize patches.

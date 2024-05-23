@@ -16,4 +16,8 @@ spec:
         kind: HelmRepository
         name: longhorn
   # https://github.com/longhorn/charts/blob/v1.6.x/charts/longhorn/values.yaml
-  values: {}
+  values:
+    ingress:
+      enabled: true
+      host: longhorn.${cluster_domain}
+
