@@ -4,11 +4,6 @@ metadata:
   name: rook-ceph
 spec:
   interval: 5m
-  # This Helm Chart supports creating and updating CRDs. So we do not need to manage them with Flux.
-  # install:
-  #   crds: CreateReplace
-  # upgrade:
-  #   crds: CreateReplace
   chart:
     spec:
       chart: rook-ceph
@@ -25,11 +20,6 @@ metadata:
   name: rook-ceph-cluster
 spec:
   interval: 5m
-  # This Helm Chart supports creating and updating CRDs. So we do not need to manage them with Flux.
-  # install:
-  #   crds: CreateReplace
-  # upgrade:
-  #   crds: CreateReplace
   dependsOn:
     - name: rook-ceph
   chart:
