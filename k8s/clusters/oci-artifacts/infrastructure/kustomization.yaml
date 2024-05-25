@@ -11,7 +11,7 @@ resources:
   - ../../../helm-charts-oci-proxy
   - ../../../homepage
   - ../../../kubelet-serving-cert-approver
-  - ../../../longhorn
+  # - ../../../longhorn # open-iscsi does not exist as a kernel module in the Default GitHub Runner images
   - ../../../metrics-server
   - ../../../oauth2-proxy
   - ../../../pulumi-operator
