@@ -23,7 +23,7 @@ spec:
         hosts:
           - host: drawio.${cluster_domain}
     persistence:
-      shared:
+      drawio:
         enabled: true
         mountPath: /drawio
 
