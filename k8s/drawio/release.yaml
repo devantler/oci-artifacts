@@ -16,4 +16,14 @@ spec:
         kind: HelmRepository
         name: drawio
   # https://github.com/truecharts/charts/blob/master/charts/stable/drawio/values.yaml
-  values: {}
+  values:
+    ingress:
+      main:
+        enabled: ${drawio_ingress_enabled:=true}
+        hosts:
+          - host: drawio.${cluster_domain}
+    persistence:
+      shared:
+        enabled: true
+        mountPath: /drawio
+
