@@ -6,6 +6,8 @@ metadata:
   name: llama-gpt-api
 spec:
   replicas: 1
+  strategy:
+    type: Recreate
   selector:
     matchLabels:
       service: llama-gpt-api
