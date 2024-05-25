@@ -23,8 +23,6 @@ jobs:
         run: |
           ksail sops ${{ vars.KSAIL_CLUSTER_NAME }} --import "${{ secrets.KSAIL_SOPS_KEY }}"
           ksail up ${{ vars.KSAIL_CLUSTER_NAME }} --timeout 600
-        env:
-          KSAIL_SOPS_KEY: ${{ secrets.KSAIL_SOPS_KEY }}
       - name: 🐎 Print free CPU
         if: always()
         run: |
