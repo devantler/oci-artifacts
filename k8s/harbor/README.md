@@ -7,8 +7,8 @@ Harbor is an open-source cloud native registry that stores, signs, and scans con
 
 ## Post-build variables
 
-| Variable                   | Description                           |     Default     | Required |
-| -------------------------- | ------------------------------------- | :-------------: | :------: |
-| cluster_domain             | The domain of the cluster             |       ""        |    ✓     |
-| harbor_storage_class       | The storage class to use for Harbor   |       ""        |    ✕     |
-| harbor_storage_access_mode | The access mode for the storage class | "ReadWriteOnce" |    ✕     |
+| Variable                             | Description                               |     Default     | Required |
+| ------------------------------------ | ----------------------------------------- | :-------------: | :------: |
+| cluster_domain                       | The domain of the cluster                 |       ""        |    ✓     |
+| harbor_storage_class                 | The storage class to use for Harbor       |       ""        |    ✕     |
+| harbor_persistent_volume_access_mode | The access mode for the persistent volume | "ReadWriteMany" |    ✕     |
