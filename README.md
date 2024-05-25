@@ -4,6 +4,7 @@
   <summary>Show/Hide Folder Structure</summary>
 
 <!-- readme-tree start -->
+
 ```
 .
 ├── .github
@@ -39,6 +40,7 @@
 
 30 directories
 ```
+
 <!-- readme-tree end -->
 
 </details>
@@ -55,9 +57,11 @@ This repository contains Kubernetes (K8s) manifests distributed as OCI Artifacts
 - [Helm Charts OCI Proxy](k8s/helm-charts-oci-proxy/README.md)
 - [Homepage](k8s/homepage/README.md)
 - [Kubelet Serving Cert Approver](k8s/kubelet-serving-cert-approver/README.md)
+- [Llama GPT](k8s/llama-gpt/README.md)
 - [Longhorn](k8s/longhorn/README.md)
 - [Metrics Server](k8s/metrics-server/README.md)
 - [OAuth2 Proxy](k8s/oauth2-proxy/README.md)
+- [PlantUML](k8s/plantuml/README.md)
 - [Pulumi Operator](k8s/pulumi-operator/README.md)
 - [Reloader](k8s/reloader/README.md)
 - [Traefik](k8s/traefik/README.md)
