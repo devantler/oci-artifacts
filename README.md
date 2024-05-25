@@ -51,6 +51,7 @@ This repository contains Kubernetes (K8s) manifests distributed as OCI Artifacts
 - [Cloudflared](k8s/cloudflared/README.md)
 - [Crossplane](k8s/crossplane/README.md)
 - [Dex](k8s/dex/README.md)
+- [Draw.io](k8s/drawio/README.md)
 - [GitHub Actions Runner Scale Set](k8s/gha-runner-scale-set/README.md)
 - [Goldilocks](k8s/goldilocks/README.md)
 - [Harbor](k8s/harbor/README.md)
