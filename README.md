@@ -24,6 +24,7 @@
     │       └── variables
     ├── crossplane
     ├── dex
+    ├── drawio
     ├── gha-runner-scale-set
     ├── goldilocks
     ├── harbor
@@ -39,7 +40,7 @@
     ├── reloader
     └── traefik
 
-32 directories
+33 directories
 ```
 <!-- readme-tree end -->
 
