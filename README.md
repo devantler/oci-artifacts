@@ -164,7 +164,7 @@ For a real life example, take a look at my [homelab](https://github.com/devantle
 
 ### Setting variables for OCI Artifacts
 
-Some of the OCI Artifacts require you to provide some variables to configure the service. You can do this by adding the variables to your variables files in the `k8s/clusters/[clusterName]/variables` folder in your own clusters repo. As the references are http, you can fairly easily decode where to look for the possible variables. For example, if you want to reference the `traefik` service, you can find the variables in the `k8s/traefik/*.yaml` files in this repository.
+Some of the OCI Artifacts require you to provide some variables to configure the service. You can do this by adding the variables to your variables files in the `k8s/clusters/[clusterName]/variables` folder in your own clusters repo. You can find the variables in the `k8s/<oci-artifact>/README.md` files in this repository.
 
 ## Contributing
 
