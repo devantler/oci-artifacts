@@ -85,7 +85,7 @@ For deploying the OCI Artifacts to a Kubernetes cluster:
 
 ## Usage
 
-### Deploying an OCI Artifact with Flux Kustomization (Recommend)
+### Deploying an OCI Artifact with Flux Kustomization (Recommended)
 
 First you have to create an `OCIRepository` to be able to deploy OCI Artifacts.
 
