@@ -4,6 +4,7 @@
   <summary>Show/Hide Folder Structure</summary>
 
 <!-- readme-tree start -->
+
 ```
 .
 ├── .github
@@ -42,6 +43,7 @@
 
 33 directories
 ```
+
 <!-- readme-tree end -->
 
 </details>
@@ -85,67 +87,91 @@ For deploying the OCI Artifacts to a Kubernetes cluster:
 
 ## Usage
 
-### Reference an OCI Artifact with Kustomize
+### Deploying an OCI Artifact with Flux Kustomization (Recommend)
 
-> [!NOTE]
-> Pulling K8s manifest over OCI is not supported by Kustomize yet. There is [an active Pull Request](https://github.com/kubernetes-sigs/kustomize/pull/5147) that will add support for this. Until then, we can use Git over HTTP to reference the OCI Artifact.
-
-To reference an OCI Artifact with Kustomize, you need to add the following to your `kustomization.yaml` files that you want to reference the OCI Artifact and its configurations from:
+First you have to create an `OCIRepository` to be able to deploy OCI Artifacts.
 
 ```yaml
-# Deploying folders
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-resources:
-  # To reference a folder you use the following syntax:
-  - https://github.com/devantler/oci-artifacts//k8s/[serviceName]?ref=[refName]
-
----
-# Deploying single files
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-resources:
-  # To reference a single file you use the following syntax:
-  - https://raw.githubusercontent.com/devantler/oci-artifacts/[refName]/k8s/[serviceName]/[pathToYamlFile]
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: OCIRepository
+metadata:
+  name: oci-artifacts
+  namespace: flux-system
+spec:
+  interval: 5m0s
+  url: oci://ghcr.io/devantler/oci-artifacts/manifests
+  ref:
+    tag: latest
 ```
 
-Where `[serviceName]` is the name of the OCI Artifact you want to reference, and `[refName]` is the name of the branch or tag you want to pull the OCI Artifact from. If you want to reference a single file, you also need to specify the [pathToYamlFile] which is the path to the yaml file relative to the OCI Artifact folder. For example `cert-manager/certificates/cluster-issuer-certificate.yaml`, if you want to pull the cluster issuer certificate provided by the cert-manager OCI Artifact
+Applying this resource to your cluster will enable you to reference and deploy OCI Artifacts with Flux Kustomizations:
+
+```yaml
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: traefik
+  namespace: flux-system
+spec:
+  interval: 1m
+  targetNamespace: traefik
+  sourceRef:
+    kind: OCIRepository
+    name: oci-artifacts
+  path: traefik
+  prune: true
+  wait: true
+  # If the OCI Artifact requires setting post-build variables,
+  # you might need decryption and substitutes configured.
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age
+  postBuild:
+    substituteFrom:
+      - kind: ConfigMap
+        name: variables
+      - kind: Secret
+        name: variables-sensitive
+  # If you further want to customize the deployment,
+  # you can freely change it up with regular Kustomize patches.
+  patches:
+    - target:
+        kind: HelmRelease
+        name: traefik
+      patch: |-
+        apiVersion: helm.toolkit.fluxcd.io/v2
+        kind: HelmRelease
+        metadata:
+          name: traefik
+        spec:
+          values:
+            ports:
+              websecure:
+                middlewares:
+                  - traefik-traefik-auth-headers@kubernetescrd
+            ingressRoute:
+              dashboard:
+                middlewares:
+                  - name: traefik-forward-auth
+                    namespace: traefik
+```
+
+For a real life example, take a look at my [homelab](https://github.com/devantler/homelab).
+
+### Deploying an OCI Artifact with Kustomize
+
+> [!NOTE]
+> Pulling K8s manifest over OCI is not supported by Kustomize yet. There is [an active Pull Request](https://github.com/kubernetes-sigs/kustomize/pull/5147) that will add support for this.
 
 ### Setting variables for OCI Artifacts
 
 Some of the OCI Artifacts require you to provide some variables to configure the service. You can do this by adding the variables to your variables files in the `k8s/clusters/[clusterName]/variables` folder in your own clusters repo. As the references are http, you can fairly easily decode where to look for the possible variables. For example, if you want to reference the `traefik` service, you can find the variables in the `k8s/traefik/*.yaml` files in this repository.
 
-### Patching OCI Artifacts
-
-Some OCI Artifacts might not meet your expectations out-of-the-box. In this case, you can patch the OCI Artifact by adding patches to your `kustomization.yaml` file that references the OCI Artifact. For example, if you want to patch the `traefik` service, you would add the following to your `kustomization.yaml` file:
-
-```yaml
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-resources:
-  # To reference a service you use the following syntax:
-  - https://[token]@github.com/devantler/oci-artifacts//k8s/traefik?ref=v0.0.3
-
-patches:
-  # To patch a service with a patch file you use the following syntax:
-  - path: traefik-patch.yaml
-    target:
-      kind: HelmRelease
-      name: traefik
-      namespace: traefik
-  # To inline patch a service you use the following syntax:
-  - patch: |-
-      - op: replace
-        path: /some/existing/path
-        value: new value
-    target:
-      kind: HelmRelease
-      name: traefik
-      namespace: traefik
-```
-
-This allows you full control over the OCI Artifacts, but if you require a lot of patches, you might want to consider contributing to the OCI Artifact to make it more flexible, or copying the OCI Artifact into your own clusters repo and configure it there.
-
 ## Contributing
 
 The OCI Artifacts repo is open source, and I welcome contributions from anyone. If you want to contribute, please create issues or pull requests in this repository and I will take a look at it.
+
+```
+
+```
