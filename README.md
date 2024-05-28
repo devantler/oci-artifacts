@@ -169,7 +169,3 @@ Some of the OCI Artifacts require you to provide some variables to configure the
 ## Contributing
 
 The OCI Artifacts repo is open source, and I welcome contributions from anyone. If you want to contribute, please create issues or pull requests in this repository and I will take a look at it.
-
-```
-
-```
