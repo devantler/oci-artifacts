@@ -11,11 +11,12 @@ resources:
   - ../../../helm-charts-oci-proxy
   - ../../../homepage
   - ../../../kubelet-serving-cert-approver
-  # - ../../../longhorn # open-iscsi does not exist as a kernel module in the Default GitHub Runner images
   - ../../../metrics-server
   - ../../../oauth2-proxy
   - ../../../plantuml
   - ../../../pulumi-operator
   - ../../../reloader
+  - ../../../tekton
   - ../../../traefik
   - configmaps/oauth2-proxy-configmap.yaml
+  # - ../../../longhorn # open-iscsi does not exist as a kernel module in the Default GitHub Runner images
