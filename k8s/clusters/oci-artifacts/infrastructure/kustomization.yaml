@@ -16,7 +16,7 @@ resources:
   - ../../../plantuml
   - ../../../pulumi-operator
   - ../../../reloader
-  - ../../../tekton-pipeline
+  - ../../../tekton
   - ../../../traefik
   - configmaps/oauth2-proxy-configmap.yaml
   # - ../../../longhorn # open-iscsi does not exist as a kernel module in the Default GitHub Runner images
