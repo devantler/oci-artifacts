@@ -4,4 +4,4 @@ metadata:
   name: tekton-pipeline
 spec:
   interval: 5m
-  url: https://cdfoundation.github.io/tekton-pipeline-helm-chart/
+  url: https://cdfoundation.github.io/tekton-helm-chart/

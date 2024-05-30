@@ -15,5 +15,5 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: tekton-pipeline
-  # https://github.com/cdfoundation/tekton-pipeline-helm-chart/blob/main/charts/tekton-pipeline-pipeline/values.yaml
+  # https://github.com/cdfoundation/tekton-helm-chart/blob/main/charts/tekton-pipeline/values.yaml
   values: {}
