@@ -10,7 +10,7 @@ spec:
     crds: CreateReplace
   chart:
     spec:
-      chart: tekton
+      chart: tekton-pipeline
       version: 1.0.2
       sourceRef:
         kind: HelmRepository
