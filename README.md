@@ -38,9 +38,10 @@
     ├── plantuml
     ├── pulumi-operator
     ├── reloader
+    ├── tekton
     └── traefik
 
-33 directories
+34 directories
 ```
 <!-- readme-tree end -->
 
