@@ -38,7 +38,7 @@
     ├── plantuml
     ├── pulumi-operator
     ├── reloader
-    ├── tekton-pipelines
+    ├── tekton-pipeline
     └── traefik
 
 34 directories

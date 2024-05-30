@@ -1,7 +1,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: tekton-pipelines
+  name: tekton-pipeline
 spec:
   interval: 5m
   install:
@@ -10,10 +10,10 @@ spec:
     crds: CreateReplace
   chart:
     spec:
-      chart: tekton-pipelines-pipeline
+      chart: tekton-pipeline
       version: 1.0.2
       sourceRef:
         kind: HelmRepository
-        name: tekton-pipelines
-  # https://github.com/cdfoundation/tekton-pipelines-helm-chart/blob/main/charts/tekton-pipelines-pipeline/values.yaml
+        name: tekton-pipeline
+  # https://github.com/cdfoundation/tekton-pipeline-helm-chart/blob/main/charts/tekton-pipeline-pipeline/values.yaml
   values: {}
