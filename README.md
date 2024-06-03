@@ -39,9 +39,11 @@
     ├── pulumi-operator
     ├── reloader
     ├── tekton
+    │   ├── pipelines
+    │   └── tasks
     └── traefik
 
-34 directories
+36 directories
 ```
 <!-- readme-tree end -->
 
