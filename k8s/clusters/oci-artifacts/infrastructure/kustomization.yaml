@@ -1,22 +1,23 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - ../../../cert-manager
-  - ../../../cloudflared
-  - ../../../crossplane
-  - ../../../dex
-  - ../../../gha-runner-scale-set
-  - ../../../goldilocks
-  - ../../../harbor
-  - ../../../helm-charts-oci-proxy
-  - ../../../homepage
-  - ../../../kubelet-serving-cert-approver
-  - ../../../metrics-server
-  - ../../../oauth2-proxy
-  - ../../../plantuml
-  - ../../../pulumi-operator
-  - ../../../reloader
-  - ../../../tekton
-  - ../../../traefik
-  - configmaps/oauth2-proxy-configmap.yaml
-  # - ../../../longhorn # open-iscsi does not exist as a kernel module in the Default GitHub Runner images
+  - cert-manager
+  - oauth2-proxy
+  # - ../../../cloudflared
+  # - ../../../crossplane
+  # - ../../../dex
+  # - ../../../gha-runner-scale-set
+  # - ../../../goldilocks
+  # - ../../../harbor
+  # - ../../../helm-charts-oci-proxy
+  # - ../../../homepage
+  # - ../../../kubelet-serving-cert-approver
+  # - ../../../metrics-server
+  # - ../../../oauth2-proxy
+  # - ../../../plantuml
+  # - ../../../pulumi-operator
+  # - ../../../reloader
+  # - ../../../tekton
+  # - ../../../traefik
+  # - configmaps/oauth2-proxy-configmap.yaml
+  # # - ../../../longhorn # open-iscsi does not exist as a kernel module in the Default GitHub Runner images

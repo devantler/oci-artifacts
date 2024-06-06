@@ -9,5 +9,5 @@ spec:
     - "${cluster_domain}"
     - "*.${cluster_domain}"
   issuerRef:
-    name: ${cluster_issuer_name}
+    name: ${cluster_issuer_name:=selfsigned-cluster-issuer}
     kind: ClusterIssuer

@@ -1,0 +1,21 @@
+apiVersion: pulumi.com/v1
+kind: Stack
+metadata:
+  name: harbor-pulumi-stack
+  namespace: pulumi-operator
+spec:
+  stack: harbor-pulumi-stack
+  backend: ${pulumi_backend:=file://}${pulumi_backend_path:=/pulumi-backend}
+  programRef:
+    name: harbor-pulumi-program
+  envRefs:
+    PULUMI_CONFIG_PASSPHRASE:
+      type: Literal
+      literal:
+        value: ""
+  destroyOnFinalize: true
+  config:
+    harbor:url: ${harbor_url:=http://harbor-core.harbor}
+    harbor:username: ${harbor_username:=admin}
+    harbor:password: ${harbor_admin_password:=Harbor12345}
+    harbor:insecure: ${harbor_insecure:="false"}

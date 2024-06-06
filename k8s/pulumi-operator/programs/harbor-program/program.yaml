@@ -1,0 +1,103 @@
+# https://www.pulumi.com/docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/#using-a-program-object
+# https://www.pulumi.com/registry/packages/harbor/api-docs/
+# https://registry.terraform.io/providers/goharbor/harbor/latest/docs/resources/registry The correct provider names are documented here
+apiVersion: pulumi.com/v1
+kind: Program
+metadata:
+  name: harbor-pulumi-program
+  namespace: pulumi-operator
+program:
+  resources:
+    # Registries
+    registryDocker:
+      type: harbor:Registry
+      properties:
+        name: docker.io
+        providerName: docker-registry
+        endpointUrl: ${harbor_docker_proxy_endpoint:=https://registry-1.docker.io}
+    registryDockerHub:
+      type: harbor:Registry
+      properties:
+        name: docker-hub.com
+        providerName: docker-hub
+        endpointUrl: ${harbor_dockerhub_proxy_endpoint:=https://hub.docker.com}
+    registryGithub:
+      type: harbor:Registry
+      properties:
+        name: ghcr.io
+        providerName: github
+        endpointUrl: ${harbor_github_proxy_endpoint:=https://ghcr.io}
+    registryGoogle:
+      type: harbor:Registry
+      properties:
+        name: gcr.io
+        providerName: docker-registry # We use the docker-registry provider as the google provider requires auth.
+        endpointUrl: ${harbor_google_proxy_endpoint:=https://gcr.io}
+    registryK8s:
+      type: harbor:Registry
+      properties:
+        name: registry.k8s.io
+        providerName: docker-registry # We use the docker-registry provider as the google provider requires auth.
+        endpointUrl: ${harbor_k8s_proxy_endpoint:=https://registry.k8s.io}
+    registryQuay:
+      type: harbor:Registry
+      properties:
+        name: quay.io
+        providerName: quay
+        endpointUrl: ${harbor_quay_proxy_endpoint:=https://quay.io}
+    # Projects
+    # projectLibrary:
+    #   type: harbor:Project
+    #   properties:
+    #     name: library
+    #   options:
+    #     import: /projects/library
+    projectProxyDocker:
+      type: harbor:Project
+      properties:
+        name: proxy-docker.io
+        registryId: $${registryDocker.registryId}
+        #deploymentSecurity: none
+        #enableContentTrust: true
+        #enableContentTrustCosign: true
+    projectProxyDockerHub:
+      type: harbor:Project
+      properties:
+        name: proxy-docker-hub.com
+        registryId: $${registryDockerHub.registryId}
+        #deploymentSecurity: none
+        #enableContentTrust: true
+        #enableContentTrustCosign: true
+    projectProxyGithub:
+      type: harbor:Project
+      properties:
+        name: proxy-ghcr.io
+        registryId: $${registryGithub.registryId}
+        #deploymentSecurity: none
+        #enableContentTrust: true
+        #enableContentTrustCosign: true
+    projectProxyGoogle:
+      type: harbor:Project
+      properties:
+        name: proxy-gcr.io
+        registryId: $${registryGoogle.registryId}
+        #deploymentSecurity: none
+        #enableContentTrust: true
+        #enableContentTrustCosign: true
+    projectProxyK8s:
+      type: harbor:Project
+      properties:
+        name: proxy-registry.k8s.io
+        registryId: $${registryK8s.registryId}
+        #deploymentSecurity: none
+        #enableContentTrust: true
+        #enableContentTrustCosign: true
+    projectProxyQuay:
+      type: harbor:Project
+      properties:
+        name: proxy-quay.io
+        registryId: $${registryQuay.registryId}
+        forceDestroy: true
+        #deploymentSecurity: none
+        #enableContentTrust: true
+        #enableContentTrustCosign: true
