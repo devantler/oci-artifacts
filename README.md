@@ -11,16 +11,18 @@
 ├── .vscode
 └── k8s
     ├── cert-manager
-    │   ├── certificates
-    │   ├── cluster-issuers
-    │   └── secrets
+    │   └── cluster-issuers
+    │       ├── cloudflare-letsencrypt
+    │       └── selfsigned
     ├── cloudflared
     ├── clusters
     │   └── oci-artifacts
-    │       ├── crds
+    │       ├── apps
+    │       │   └── homepage
     │       ├── flux-system
     │       ├── infrastructure
-    │       │   └── configmaps
+    │       │   ├── cert-manager
+    │       │   └── oauth2-proxy
     │       └── variables
     ├── crossplane
     ├── dex
@@ -37,13 +39,18 @@
     ├── oauth2-proxy
     ├── plantuml
     ├── pulumi-operator
+    │   └── programs
+    │       └── harbor-program
     ├── reloader
     ├── tekton
     │   ├── pipelines
+    │   │   └── ksail
     │   └── tasks
     └── traefik
+        └── middlewares
+            └── forward-auth
 
-36 directories
+43 directories
 ```
 <!-- readme-tree end -->
 
