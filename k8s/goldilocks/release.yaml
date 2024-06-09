@@ -18,7 +18,6 @@ spec:
   # https://github.com/FairwindsOps/charts/blob/master/stable/goldilocks/values.yaml
   values:
     dashboard:
-      replicaCount: ${goldilocks_replica_count:=1}
       ingress:
         enabled: true
         hosts:
