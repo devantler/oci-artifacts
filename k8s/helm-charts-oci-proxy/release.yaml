@@ -3,7 +3,7 @@ kind: HelmRelease
 metadata:
   name: chartproxy
 spec:
-  interval: 5m
+  interval: 1m
   chart:
     spec:
       chart: helm-charts-oci-proxy

@@ -3,5 +3,5 @@ kind: HelmRepository
 metadata:
   name: homepage
 spec:
-  interval: 5m
+  interval: 1m
   url: https://jameswynn.github.io/helm-charts/

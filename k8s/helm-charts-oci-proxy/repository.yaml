@@ -3,6 +3,6 @@ kind: HelmRepository
 metadata:
   name: chartproxy
 spec:
-  interval: 5m
+  interval: 1m
   type: "oci"
   url: oci://8gears.container-registry.com/library

@@ -3,5 +3,5 @@ kind: HelmRepository
 metadata:
   name: tekton
 spec:
-  interval: 5m
+  interval: 1m
   url: https://cdfoundation.github.io/tekton-helm-chart/
