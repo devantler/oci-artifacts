@@ -43,14 +43,13 @@
     │       └── harbor-program
     ├── reloader
     ├── tekton
-    │   ├── pipelines
-    │   │   └── ksail
-    │   └── tasks
+    │   └── pipelines
+    │       └── ksail
     └── traefik
         └── middlewares
             └── forward-auth
 
-43 directories
+42 directories
 ```
 <!-- readme-tree end -->
 
