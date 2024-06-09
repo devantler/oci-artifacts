@@ -22,6 +22,7 @@
     │       ├── flux-system
     │       ├── infrastructure
     │       │   ├── cert-manager
+    │       │   ├── kubeshark
     │       │   └── oauth2-proxy
     │       └── variables
     ├── crossplane
@@ -33,6 +34,7 @@
     ├── helm-charts-oci-proxy
     ├── homepage
     ├── kubelet-serving-cert-approver
+    ├── kubeshark
     ├── llama-gpt
     ├── longhorn
     ├── metrics-server
@@ -49,7 +51,7 @@
         └── middlewares
             └── forward-auth
 
-42 directories
+44 directories
 ```
 <!-- readme-tree end -->
 
