@@ -3,6 +3,6 @@ kind: HelmRepository
 metadata:
   name: crossplane
 spec:
-  interval: 5m
+  interval: 1m
   url: https://charts.crossplane.io/stable
 

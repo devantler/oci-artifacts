@@ -3,14 +3,14 @@ kind: HelmRelease
 metadata:
   name: traefik
 spec:
-  interval: 5m
+  interval: 1m
   dependsOn:
     - name: cert-manager
       namespace: cert-manager
   chart:
     spec:
       chart: traefik
-      version: 28.1.0
+      version: 28.2.0
       sourceRef:
         kind: HelmRepository
         name: traefik

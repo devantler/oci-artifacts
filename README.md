@@ -43,14 +43,13 @@
     │       └── harbor-program
     ├── reloader
     ├── tekton
-    │   ├── pipelines
-    │   │   └── ksail
-    │   └── tasks
+    │   └── pipelines
+    │       └── ksail
     └── traefik
         └── middlewares
             └── forward-auth
 
-43 directories
+42 directories
 ```
 <!-- readme-tree end -->
 
@@ -106,7 +105,7 @@ metadata:
   name: oci-artifacts
   namespace: flux-system
 spec:
-  interval: 5m0s
+  interval: 1m0s
   url: oci://ghcr.io/devantler/oci-artifacts/manifests
   ref:
     tag: latest

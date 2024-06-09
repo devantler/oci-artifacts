@@ -3,7 +3,7 @@ kind: HelmRelease
 metadata:
   name: drawio
 spec:
-  interval: 5m
+  interval: 1m
   install:
     crds: CreateReplace
   upgrade:

@@ -4,7 +4,7 @@ metadata:
   name: gha-runner-scale-set-controller
   namespace: gha-runner-scale-set-controller
 spec:
-  interval: 5m
+  interval: 1m
   install:
     crds: CreateReplace
   upgrade:
@@ -26,7 +26,7 @@ metadata:
   name: gha-runner-scale-set
   namespace: gha-runner-scale-set
 spec:
-  interval: 5m
+  interval: 1m
   dependsOn:
     - name: gha-runner-scale-set-controller
       namespace: gha-runner-scale-set-controller
@@ -45,6 +45,6 @@ spec:
   # https://github.com/actions/actions-runner-controller/blob/master/charts/gha-runner-scale-set/values.yaml
   values:
     githubConfigUrl: ${gha_runner_scale_set_url}
-    githubConfigSecret: ${gha_runner_scale_set_secret:=}
+    githubConfigSecret: github-token
     runnerScaleSetName: ${gha_runner_scale_set_name:=gha-runner-scale-set}
     maxRunners: ${gha_runner_scale_set_max_runners:=5}
