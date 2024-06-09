@@ -3,5 +3,5 @@ kind: HelmRepository
 metadata:
   name: dex
 spec:
-  interval: 5m
+  interval: 1m
   url: https://charts.dexidp.io
