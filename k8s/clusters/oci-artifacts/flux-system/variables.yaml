@@ -3,6 +3,8 @@ kind: Kustomization
 metadata:
   name: variables
   namespace: flux-system
+  labels:
+    app.kubernetes.io/sops: enabled
 spec:
   interval: 30s
   dependsOn: []
@@ -12,9 +14,3 @@ spec:
   path: clusters/oci-artifacts/variables
   prune: true
   wait: true
-  decryption:
-    provider: sops
-    secretRef:
-      name: sops-age
-  postBuild:
-    substituteFrom: []
