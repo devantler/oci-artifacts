@@ -15,12 +15,6 @@ program:
         name: docker.io
         providerName: docker-registry
         endpointUrl: ${harbor_docker_proxy_endpoint:=https://registry-1.docker.io}
-    registryDockerHub:
-      type: harbor:Registry
-      properties:
-        name: docker-hub.com
-        providerName: docker-hub
-        endpointUrl: ${harbor_dockerhub_proxy_endpoint:=https://hub.docker.com}
     registryGithub:
       type: harbor:Registry
       properties:
@@ -45,6 +39,12 @@ program:
         name: quay.io
         providerName: quay
         endpointUrl: ${harbor_quay_proxy_endpoint:=https://quay.io}
+    registryMicrosoft:
+      type: harbor:Registry
+      properties:
+        name: mcr.microsoft.com
+        providerName: docker-registry
+        endpointUrl: ${harbor_microsoft_proxy_endpoint:=https://mcr.microsoft.com}
     # Projects
     # projectLibrary:
     #   type: harbor:Project
@@ -57,14 +57,6 @@ program:
       properties:
         name: proxy-docker.io
         registryId: $${registryDocker.registryId}
-        #deploymentSecurity: none
-        #enableContentTrust: true
-        #enableContentTrustCosign: true
-    projectProxyDockerHub:
-      type: harbor:Project
-      properties:
-        name: proxy-docker-hub.com
-        registryId: $${registryDockerHub.registryId}
         #deploymentSecurity: none
         #enableContentTrust: true
         #enableContentTrustCosign: true
@@ -98,6 +90,14 @@ program:
         name: proxy-quay.io
         registryId: $${registryQuay.registryId}
         forceDestroy: true
+        #deploymentSecurity: none
+        #enableContentTrust: true
+        #enableContentTrustCosign: true
+    projectProxyMicrosoft:
+      type: harbor:Project
+      properties:
+        name: proxy-mcr.microsoft.com
+        registryId: $${registryMicrosoft.registryId}
         #deploymentSecurity: none
         #enableContentTrust: true
         #enableContentTrustCosign: true
