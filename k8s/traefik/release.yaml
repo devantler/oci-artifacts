@@ -9,7 +9,7 @@ spec:
       namespace: cert-manager
   chart:
     spec:
-      chart: helm/traefik
+      chart: traefik
       version: 29.0.1
       sourceRef:
         kind: HelmRepository
