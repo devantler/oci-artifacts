@@ -4,4 +4,5 @@ metadata:
   name: traefik
 spec:
   interval: 1m
-  url: https://traefik.github.io/charts
+  type: oci
+  url: oci://ghcr.io/traefik/helm/traefik
