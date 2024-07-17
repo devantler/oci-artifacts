@@ -28,7 +28,7 @@
     ├── crossplane
     ├── dex
     ├── drawio
-    ├── gha-runner-scale-set
+    ├── gha-runner-scale-set-controller
     ├── goldilocks
     ├── harbor
     ├── helm-charts-oci-proxy
