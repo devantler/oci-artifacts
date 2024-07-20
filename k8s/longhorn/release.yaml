@@ -19,5 +19,5 @@ spec:
   values:
     ingress:
       enabled: true
-      host: longhor.${cluster_domain}
+      host: longhorn.${cluster_domain}
 
