@@ -1,7 +1,0 @@
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: HelmRepository
-metadata:
-  name: tekton
-spec:
-  interval: 1m
-  url: https://cdfoundation.github.io/tekton-helm-chart/
