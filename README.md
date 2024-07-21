@@ -22,7 +22,7 @@
     │       ├── flux-system
     │       ├── infrastructure
     │       │   ├── cert-manager
-    │       │   ├── kubeshark
+    │       │   ├── harbor
     │       │   └── oauth2-proxy
     │       └── variables
     ├── crossplane
