@@ -10,7 +10,7 @@ resources:
   - homepage
   - oauth2-proxy
   - plantuml
-  - pulumi-operator
+  # - pulumi-operator # Not supported on ARM64
   - reloader
   - traefik
 
