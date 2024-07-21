@@ -22,7 +22,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  KSAIL_CLUSTER_NAME: oci-artifacts-ksail
+  KSAIL_CLUSTER_NAME: oci-artifacts
 
 jobs:
   test:
