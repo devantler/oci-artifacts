@@ -22,8 +22,16 @@
     │       ├── flux-system
     │       ├── releases
     │       │   ├── cert-manager
+    │       │   ├── cloudflared
+    │       │   ├── gha-runner-scale-set-controller
+    │       │   ├── goldilocks
     │       │   ├── harbor
+    │       │   ├── helm-charts-oci-proxy
+    │       │   ├── homepage
+    │       │   ├── metrics-server
     │       │   ├── oauth2-proxy
+    │       │   ├── plantuml
+    │       │   ├── pulumi-operator
     │       │   ├── reloader
     │       │   └── traefik
     │       └── variables
@@ -45,7 +53,7 @@
         └── middlewares
             └── forward-auth
 
-38 directories
+46 directories
 ```
 <!-- readme-tree end -->
 
