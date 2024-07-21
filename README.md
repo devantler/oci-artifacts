@@ -20,22 +20,19 @@
     │       ├── apps
     │       │   └── homepage
     │       ├── flux-system
-    │       ├── infrastructure
+    │       ├── releases
     │       │   ├── cert-manager
     │       │   ├── harbor
-    │       │   └── oauth2-proxy
+    │       │   ├── oauth2-proxy
+    │       │   ├── reloader
+    │       │   └── traefik
     │       └── variables
-    ├── crossplane
-    ├── dex
-    ├── drawio
     ├── gha-runner-scale-set-controller
     ├── goldilocks
     ├── harbor
     ├── helm-charts-oci-proxy
     ├── homepage
     ├── kubelet-serving-cert-approver
-    ├── kubeshark
-    ├── llama-gpt
     ├── longhorn
     ├── metrics-server
     ├── oauth2-proxy
@@ -44,14 +41,11 @@
     │   └── programs
     │       └── harbor-program
     ├── reloader
-    ├── tekton
-    │   └── pipelines
-    │       └── ksail
     └── traefik
         └── middlewares
             └── forward-auth
 
-44 directories
+38 directories
 ```
 <!-- readme-tree end -->
 
