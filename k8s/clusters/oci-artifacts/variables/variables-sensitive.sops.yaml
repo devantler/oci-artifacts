@@ -1,32 +1,29 @@
-# You need to encrypt this file with SOPS manually.
-# ksail sops --encrypt variables-sensitive.sops.yaml
 apiVersion: v1
 kind: Secret
 metadata:
     name: variables-sensitive
     namespace: flux-system
 stringData:
-    cloudflared_tunnel_token: ENC[AES256_GCM,data:pJSFBUZEYh55zJzCzRk/46PMeNeqgbrkorkSTgETS4cl/+P/Brar9CIFcacR3cRrv2N1noRBtgkZbzPa4NxuswfRx2VJoswN7t6kobaDlbvPFMBMzCz92GuL3mrTJtAbnOeGL4kdfSKhI64tnEGBT4eYQZeassNoTKu75Z1Anz+zCkpAv437kwe/4rCB3/d0cZ2y70xnQlBAIBY8qKh6z0wTnH2vSctRFfVgMYV1oxDYrbZV2EqX9A==,iv:0k8K6RfdwTBTXJ1ZrqF3hHKiRKquPBHOkvFkMJfX/Ck=,tag:/9Q0biyzLVRhWaGffKoC3g==,type:str]
-    github_token: ENC[AES256_GCM,data:pzMy6NeOBeK7y9mJgB5ZyBniENis+a3aZy3suD8xl5gxx83Uewu5jg==,iv:R4yZehuvRNPhRiGA2g9+RoHY4rzs4r8mBfoaxcvDog0=,tag:wmPqc3kxyc4b5jdYOqzsZA==,type:str]
-    oauth2_proxy_client_secret: ENC[AES256_GCM,data:uoO5F+eXQMz+oNKOWu0eRg3rrfZmvPY+qPC+jVhkF2t5sD1QmYLZ7A==,iv:xAfMFUhBC8sUHTn3i/TbtY+X/aKXuJRL80tVJiEljjY=,tag:mF5T39HbHxfNywEUeplCYg==,type:str]
-    oauth2_proxy_cookie_secret: ENC[AES256_GCM,data:LHRj8aTTepEBZTCpner3TbUOyxQLiwMpMFAMe6EAuGTrU26o2HY7/SyKihs=,iv:oaHRc5gTA6dhAFyp+fWXwwWRUfu+h9ON+MhV9yVrB1Q=,tag:pG38+ginZV2eKAclw3CrZg==,type:str]
+    cloudflared_tunnel_token: ENC[AES256_GCM,data:T8uct6HNkG2+NytMD4eelAz8I3OPuMsEw9sY/mjUDJfBNzV40WJAP+8EsEWKU0GngN+eVKwcnhW+rj97XhZVihAT3+aByzkPQL7VcASnFCa9WDvKpiKUGfdINI0P9fbZkqJ+d/aCuoyG/FK57+DiGV28iw6uqcoD2VMVTYeqpRrM9nY4CKeCOTAy/pkRuXfVXQo750zeZDR+QDDodeangOhU4/nS4AIQO6NJINBq011VYsUeHYiIkw==,iv:hhglJ5IT1LKUdnCdCPrvqse5psk3i+BciFVMNkb+Dbc=,tag:AV8BweAdMdSW9EeVx9+Gfw==,type:str]
+    oauth2_proxy_client_secret: ENC[AES256_GCM,data:NVRZ3uKrkKa8NlxOu0l660SimWbbSx4Fai5NHdT0qp4+lkPCeA09+g==,iv:C5uRRiSdFnsmLq0an9DFu8+ocj56lZR1qJWHMluAZEw=,tag:66XX2KaAl0J6rAkWPgZz7A==,type:str]
+    oauth2_proxy_cookie_secret: ENC[AES256_GCM,data:EWtIulQNsHvBuMFsShPORLseAFJJcwqCkfv3cVhWQ7mNGSiXgC3K4q8E1w4=,iv:Mf24XjLqpet71N0y8dcmNkTpD385xTMiV1b4hMgNefM=,tag:piMtn3s9dEdwW2zxdZMv+w==,type:str]
 sops:
     kms: []
     gcp_kms: []
     azure_kv: []
     hc_vault: []
     age:
-        - recipient: age120p4hfdjg4x84rcl50vaus77l6rvpqyfjw23lszcpa089asr4s4qrtytwd
+        - recipient: age1u6vg8wles8yl43eztdwt2v4htzuv43e5p7vngwu9j0gqsvwuq5qs063vsf
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB2dGhiR3pvK1hNbWN4NDZ1
-            RzA4S0p2eEFhaHl5ZXZMS05iQzRMTXdqcVgwClQyeUdwUjh6RVp6NjFaQjQ3U3Qx
-            a2RoV2tMOXZNc3lyVnJtRWRlK29mMjQKLS0tIHB1UWVHTW01NmtjYzlVZFN6UHRD
-            dm5TamJ3eGlrV3pZYmJUZUNGNURLMGsKlp4BSFvfOHJ3ktY26qWR605TRob4Rd8q
-            3c9Lo7JbTFjfJ3J3mUTdrHcmPg/sVLNGezuklI5sw96JvhnY6RkBQg==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBUSDZFaXN6T3paQ2VndmVH
+            S2RlOVFsT1RnVGNBVmNENHFFSU9QeUJoc2djCkNMTlU0REx6Q0tLVmZVMkFZM2tY
+            ZnRQNmtzZ3RMTEVIQnNqVXJqRFJkTFkKLS0tIDllQzQ2YkRpNjJ1bFFRZ1BYcXpz
+            QTloV0dJNDBzUzA4aSt1THRyclBQWXcK0hc1xM0qocfoPGhDX1Cv8gqfcnH1aM/J
+            YmLfVmQ2ebYEZFE4/3RRYYe5HyDTXT/dryAg4h6ocUxWIs5nW0mFFw==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2024-05-14T20:25:48Z"
-    mac: ENC[AES256_GCM,data:Cu2WPJTzExoAWCpl90UQBuZE2nWHeVmC+Ft+91C17HqE/lU7ocpquqQkRAT9laiKYT4AqvPN2H8///yqujz36joYgs0+3Dc89SYdzjduyuQ4uBuWNVaC9INREQt8DH3YJrIYhKVmjO6h7HbZc+amnocfQIq1rvQCZEeNuQsgv9M=,iv:Q5tJuUUu/5pV77xLBpcgew7gbwx6Or3V4tZ13e/Fz90=,tag:zKjYyDbhWOtuLSCFTrKhcA==,type:str]
+    lastmodified: "2024-07-21T13:05:07Z"
+    mac: ENC[AES256_GCM,data:RR62WA/AHHIvh58a4yq39b+Z2IQmCdGD0ZAiRplxP79uj5kXaVl2avPko19jIrnJCwKxCUNx7OWjuAhR7LnveepDdqLg5OA0agStOkBS8fYpd2lj2+BLGq3CozL86Kill4HdDnO8/JALzQ8BIN22tBC2dephjtcC2ePLHSpd/g4=,iv:lxA/zlZyDobwMi61yAJBLegTOD2hBicGau1Ynfh1LcI=,tag:xpS1E0cLO5V0wPMxYvjMjg==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData)$
     version: 3.8.1
