@@ -13,10 +13,6 @@ resources:
   - pulumi-operator
   - reloader
   - traefik
-  # - ../../../gha-runner-scale-set
-  # - ../../../homepage
-  # - ../../../kubelet-serving-cert-approver
-  # # - ../../../longhorn # open-iscsi does not exist as a kernel module in the Default GitHub Runner images
 
 patches:
   - patch: |
