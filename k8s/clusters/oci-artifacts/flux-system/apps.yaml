@@ -13,6 +13,6 @@ spec:
   sourceRef:
     kind: OCIRepository
     name: flux-system
-  path: clusters/oci-artifacts-ksail/apps
+  path: clusters/oci-artifacts/apps
   prune: true
   wait: true
