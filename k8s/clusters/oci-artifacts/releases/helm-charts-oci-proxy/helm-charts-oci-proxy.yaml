@@ -1,0 +1,17 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: helm-charts-oci-proxy
+  namespace: flux-system
+  labels:
+    app.kubernetes.io/sops: enabled
+    app.kubernetes.io/post-build-variables: enabled
+spec:
+  interval: 1m
+  targetNamespace: helm-charts-oci-proxy
+  sourceRef:
+    kind: OCIRepository
+    name: flux-system
+  path: helm-charts-oci-proxy
+  prune: true
+  wait: true

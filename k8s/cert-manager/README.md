@@ -24,7 +24,6 @@ This certificate is used to issue certificates for any cluster issuer. It must b
 | Variable            | Description                    | Default | Required |
 | ------------------- | ------------------------------ | :-----: | :------: |
 | cluster_domain      | The domain of the cluster      |         |    ✓     |
-| cluster_issuer_name | The name of the cluster issuer |         |    ✓     |
 
 #### Self-Signed Cluster Issuer
 

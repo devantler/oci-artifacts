@@ -2,21 +2,20 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - cert-manager
+  - cloudflared
+  - gha-runner-scale-set-controller
+  - goldilocks
   - harbor
+  - helm-charts-oci-proxy
+  - homepage
   - oauth2-proxy
+  - plantuml
+  - pulumi-operator
   - reloader
   - traefik
-  # - ../../../cloudflared
   # - ../../../gha-runner-scale-set
-  # - ../../../goldilocks
-  # - ../../../helm-charts-oci-proxy
   # - ../../../homepage
   # - ../../../kubelet-serving-cert-approver
-  # - ../../../metrics-server
-  # - ../../../plantuml
-  # - ../../../pulumi-operator
-  # - ../../../reloader
-  # - configmaps/oauth2-proxy-configmap.yaml
   # # - ../../../longhorn # open-iscsi does not exist as a kernel module in the Default GitHub Runner images
 
 patches:
