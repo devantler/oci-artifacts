@@ -7,20 +7,15 @@ resources:
   - reloader
   - traefik
   # - ../../../cloudflared
-  # - ../../../crossplane
-  # - ../../../dex
   # - ../../../gha-runner-scale-set
   # - ../../../goldilocks
-  # - ../../../harbor
   # - ../../../helm-charts-oci-proxy
   # - ../../../homepage
   # - ../../../kubelet-serving-cert-approver
   # - ../../../metrics-server
-  # - ../../../oauth2-proxy
   # - ../../../plantuml
   # - ../../../pulumi-operator
   # - ../../../reloader
-  # - ../../../tekton
   # - configmaps/oauth2-proxy-configmap.yaml
   # # - ../../../longhorn # open-iscsi does not exist as a kernel module in the Default GitHub Runner images
 
