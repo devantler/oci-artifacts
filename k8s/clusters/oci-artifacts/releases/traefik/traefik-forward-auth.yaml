@@ -1,0 +1,27 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: traefik-forward-auth
+  namespace: flux-system
+spec:
+  interval: 1m
+  dependsOn:
+    - name: traefik
+    - name: oauth2-proxy
+  targetNamespace: traefik
+  sourceRef:
+    kind: OCIRepository
+    name: flux-system
+  path: traefik/middlewares/forward-auth
+  prune: true
+  wait: true
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age
+  postBuild:
+    substituteFrom:
+      - kind: ConfigMap
+        name: variables
+      - kind: Secret
+        name: variables-sensitive

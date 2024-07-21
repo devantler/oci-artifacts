@@ -1,8 +1,0 @@
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: HelmRepository
-metadata:
-  name: drawio
-spec:
-  interval: 1m
-  url: oci://tccr.io/truecharts
-  type: oci
