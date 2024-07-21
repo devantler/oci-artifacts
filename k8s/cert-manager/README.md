@@ -7,7 +7,9 @@ Cert Manager is a Kubernetes add-on to automate the management and issuance of T
 
 ## Post-build variables
 
-This OCI Artifact currently has no post-build variables to configure.
+| Variable       | Description               | Default | Required |
+| -------------- | ------------------------- | :-----: | :------: |
+| cluster_domain | The domain of the cluster |         |    ✓     |
 
 ## CRDs
 
@@ -21,9 +23,10 @@ This OCI Artifact provides CRDs. They must be deployed separately.
 
 This certificate is used to issue certificates for any cluster issuer. It must be configured with the correct issuer.
 
-| Variable            | Description                    | Default | Required |
-| ------------------- | ------------------------------ | :-----: | :------: |
-| cluster_domain      | The domain of the cluster      |         |    ✓     |
+| Variable                                   | Description                              | Default | Required |
+| ------------------------------------------ | ---------------------------------------- | :-----: | :------: |
+| cert_manager_replica_count                 | The number of replicas                   |    2    |    ✕     |
+| cert_manager_pod_disruption_budget_enabled | Enable/disable the pod disruption budget |  true   |    ✕     |
 
 #### Self-Signed Cluster Issuer
 
