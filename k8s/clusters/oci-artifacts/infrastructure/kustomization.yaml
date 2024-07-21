@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   - cert-manager
   - oauth2-proxy
+  - harbor
   # - ../../../cloudflared
   # - ../../../crossplane
   # - ../../../dex
