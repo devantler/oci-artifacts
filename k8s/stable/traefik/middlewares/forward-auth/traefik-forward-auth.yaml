@@ -5,11 +5,11 @@ metadata:
   namespace: traefik
 spec:
   forwardAuth:
-    address: https://oauth2-proxy.${cluster_domain}/
+    address: ${traefik_forward_auth_address}
     trustForwardHeader: true
     authResponseHeaders:
       - X-Auth-Request-Access-Token
       - Authorization
     tls:
-      insecureSkipVerify: ${traefik_forward_auth_tls_insecure_skip_verify:=true}
+      insecureSkipVerify: ${traefik_forward_auth_tls_insecure_skip_verify:=false}
       certSecret: cluster-issuer-certificate-tls

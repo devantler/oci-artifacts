@@ -1,0 +1,8 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: traefik
+spec:
+  interval: 1m
+  type: oci
+  url: oci://${helm_repository_proxy_url:=chartproxy.container-registry.com}/traefik.github.io/charts
