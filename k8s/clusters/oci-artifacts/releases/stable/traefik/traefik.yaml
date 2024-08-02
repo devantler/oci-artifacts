@@ -14,7 +14,7 @@ spec:
   sourceRef:
     kind: OCIRepository
     name: flux-system
-  path: traefik
+  path: stable/traefik
   prune: true
   wait: true
   patches:
