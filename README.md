@@ -17,8 +17,6 @@
     ├── cloudflared
     ├── clusters
     │   └── oci-artifacts
-    │       ├── apps
-    │       │   └── homepage
     │       ├── flux-system
     │       ├── releases
     │       │   ├── cert-manager
@@ -53,7 +51,7 @@
         └── middlewares
             └── forward-auth
 
-46 directories
+44 directories
 ```
 <!-- readme-tree end -->
 
