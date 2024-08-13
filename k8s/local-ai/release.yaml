@@ -20,3 +20,15 @@ spec:
     deployment:
       image:
         tag: ${local_ai_image_tag:=latest-aio-cpu}
+    ingress:
+      enabled: ${local_ai_ingress_enabled:=true}
+      hosts:
+        - host: local-ai.${cluster_domain}
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
+    persistence:
+      models:
+        storageClass: ""
+      output:
+        storageClass: ""
