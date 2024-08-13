@@ -29,6 +29,6 @@ spec:
               pathType: ImplementationSpecific
     persistence:
       models:
-        storageClass: ""
+        storageClass: "" # Empty = default
       output:
-        storageClass: ""
+        storageClass: "" # Empty = default
