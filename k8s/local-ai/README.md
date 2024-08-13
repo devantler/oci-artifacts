@@ -9,3 +9,4 @@ A free OpenAI drop-in alternative for AI/ML models. It requires no GPU or intern
 | local_ai_image_tag               | The tag of the LocalAI image                       | latest        | ✕        |
 | local_ai_ingress_enabled         | Enable ingress for LocalAI                         | true          | ✕        |
 | local_ai_persistence_access_mode | The access mode for the LocalAI persistence volume | ReadWriteMany | ✕        |
+| local_ai_models_persistence_size | The size of the LocalAI models persistence volume  | 10Gi          | ✕        |
