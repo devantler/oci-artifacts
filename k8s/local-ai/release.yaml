@@ -30,5 +30,7 @@ spec:
     persistence:
       models:
         storageClass: "" # Empty = default
+        accessModes: ${local_ai_persistence_access_mode:=ReadWriteMany}
       output:
         storageClass: "" # Empty = default
+        accessModes: ${local_ai_persistence_access_mode:=ReadWriteMany}
