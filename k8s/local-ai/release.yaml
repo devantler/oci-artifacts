@@ -1,0 +1,36 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: local-ai
+spec:
+  interval: 1m
+  install:
+    crds: CreateReplace
+  upgrade:
+    crds: CreateReplace
+  chart:
+    spec:
+      chart: local-ai
+      version: 3.3.0
+      sourceRef:
+        kind: HelmRepository
+        name: local-ai
+  # https://github.com/go-skynet/helm-charts/blob/main/charts/local-ai/values.yaml
+  values:
+    deployment:
+      image:
+        tag: ${local_ai_image_tag:=latest-aio-cpu}
+    ingress:
+      enabled: ${local_ai_ingress_enabled:=true}
+      hosts:
+        - host: local-ai.${cluster_domain}
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
+    persistence:
+      models:
+        storageClass: "" # Empty = default
+        accessModes: ${local_ai_persistence_access_mode:=ReadWriteMany}
+      output:
+        storageClass: "" # Empty = default
+        accessModes: ${local_ai_persistence_access_mode:=ReadWriteMany}
