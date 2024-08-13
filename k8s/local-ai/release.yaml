@@ -16,4 +16,7 @@ spec:
         kind: HelmRepository
         name: local-ai
   # https://github.com/go-skynet/helm-charts/blob/main/charts/local-ai/values.yaml
-  values: {}
+  values:
+    deployment:
+      image:
+        tag: ${local_ai_image_tag:=latest-aio-cpu}
