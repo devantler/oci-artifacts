@@ -26,6 +26,7 @@
     │       │   ├── harbor
     │       │   ├── helm-charts-oci-proxy
     │       │   ├── homepage
+    │       │   ├── k8sgpt-operator
     │       │   ├── metrics-server
     │       │   ├── oauth2-proxy
     │       │   ├── plantuml
@@ -38,6 +39,7 @@
     ├── harbor
     ├── helm-charts-oci-proxy
     ├── homepage
+    ├── k8sgpt-operator
     ├── kubelet-serving-cert-approver
     ├── longhorn
     ├── metrics-server
@@ -51,7 +53,7 @@
         └── middlewares
             └── forward-auth
 
-44 directories
+46 directories
 ```
 <!-- readme-tree end -->
 
