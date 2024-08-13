@@ -6,13 +6,14 @@ resources:
   - gha-runner-scale-set-controller
   - goldilocks
   - harbor
-  # - helm-charts-oci-proxy # Not supported on ARM64
   - homepage
+  - k8sgpt-operator
   - oauth2-proxy
   - plantuml
-  # - pulumi-operator # Not supported on ARM64
   - reloader
   - traefik
+  # - helm-charts-oci-proxy # Not supported on ARM64
+  # - pulumi-operator # Not supported on ARM64
 
 patches:
   - patch: |
