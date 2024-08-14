@@ -10,6 +10,7 @@ resources:
   - k8sgpt-operator
   - local-ai
   - oauth2-proxy
+  - ollama
   - plantuml
   - reloader
   - traefik
