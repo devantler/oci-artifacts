@@ -30,6 +30,7 @@
     │       │   ├── local-ai
     │       │   ├── metrics-server
     │       │   ├── oauth2-proxy
+    │       │   ├── ollama
     │       │   ├── plantuml
     │       │   ├── pulumi-operator
     │       │   ├── reloader
@@ -46,6 +47,7 @@
     ├── longhorn
     ├── metrics-server
     ├── oauth2-proxy
+    ├── ollama
     ├── plantuml
     ├── pulumi-operator
     │   └── programs
@@ -55,7 +57,7 @@
         └── middlewares
             └── forward-auth
 
-48 directories
+50 directories
 ```
 <!-- readme-tree end -->
 
