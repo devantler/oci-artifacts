@@ -76,6 +76,7 @@ This repository contains Kubernetes (K8s) manifests distributed as OCI Artifacts
 - [Longhorn](k8s/longhorn/README.md)
 - [Metrics Server](k8s/metrics-server/README.md)
 - [OAuth2 Proxy](k8s/oauth2-proxy/README.md)
+- [Ollama](k8s/ollama/README.md)
 - [PlantUML](k8s/plantuml/README.md)
 - [Pulumi Operator](k8s/pulumi-operator/README.md)
 - [Reloader](k8s/reloader/README.md)
