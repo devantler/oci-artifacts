@@ -1,7 +1,7 @@
 # Welcome to Devantler's OCI Artifacts 🚀
 
 <details>
-  <summary>Show/Hide Folder Structure</summary>
+  <summary>Show/hide folder structure</summary>
 
 <!-- readme-tree start -->
 ```
