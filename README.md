@@ -55,9 +55,10 @@
     ├── reloader
     └── traefik
         └── middlewares
+            ├── basic-auth
             └── forward-auth
 
-50 directories
+51 directories
 ```
 <!-- readme-tree end -->
 
