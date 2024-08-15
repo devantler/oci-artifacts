@@ -4,7 +4,6 @@
   <summary>Show/hide folder structure</summary>
 
 <!-- readme-tree start -->
-
 ```
 .
 ├── .github
@@ -52,7 +51,7 @@
     ├── plantuml
     ├── pulumi-operator
     │   └── programs
-    │       └── harbor-program
+    │       └── harbor-proxy-program
     ├── reloader
     └── traefik
         └── middlewares
@@ -61,7 +60,6 @@
 
 51 directories
 ```
-
 <!-- readme-tree end -->
 
 </details>
