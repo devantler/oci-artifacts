@@ -84,6 +84,8 @@ This repository contains Kubernetes (K8s) manifests distributed as OCI Artifacts
 - [Pulumi Operator](k8s/pulumi-operator/README.md)
 - [Reloader](k8s/reloader/README.md)
 - [Traefik](k8s/traefik/README.md)
+  - [Middleware - Basic Auth](k8s/traefik/middlewares/basic-auth/README.md)
+  - [Middleware - Forward Auth](k8s/traefik/middlewares/forward-auth/README.md)
 
 OCI Artifacts are a great way to distribute ready-to-use K8s manifests. It requires almost no lines of code to get services deployed, and together with Flux and Flux post-build variables it can be a great addition to Helm charts. In most cases deploying a service, will require a single line + setting some post-build variables. In more advanced scenarios it might require patching the OCI Artifact with Kustomize patches.
 

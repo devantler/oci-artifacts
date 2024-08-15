@@ -19,3 +19,8 @@ Traefik is a reverse proxy and load balancer that routes incoming requests to th
 | cluster_domain                   | The domain of the cluster                                         |      ""      |    ✓     |
 | traefik_ingress_load_balancer_ip | The IP address of the load balancer                               |      ""      |    ✕     |
 | traefik_service_type             | The service to provide ingressing for (LoadBalancer or ClusterIP) | LoadBalancer |    ✕     |
+
+## Custom Resources
+
+- [Middleware - Basic Auth](middlewares/basic-auth/README.md)
+- [Middleware - Forward Auth](middlewares/rate-limit/README.md)
