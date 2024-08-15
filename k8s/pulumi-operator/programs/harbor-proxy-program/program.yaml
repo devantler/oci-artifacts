@@ -4,7 +4,7 @@
 apiVersion: pulumi.com/v1
 kind: Program
 metadata:
-  name: harbor-pulumi-program
+  name: harbor-proxy-program
   namespace: pulumi-operator
 program:
   resources:

@@ -4,6 +4,7 @@
   <summary>Show/hide folder structure</summary>
 
 <!-- readme-tree start -->
+
 ```
 .
 ├── .github
@@ -60,6 +61,7 @@
 
 51 directories
 ```
+
 <!-- readme-tree end -->
 
 </details>
@@ -73,15 +75,16 @@ This repository contains Kubernetes (K8s) manifests distributed as OCI Artifacts
 - [Harbor](k8s/harbor/README.md)
 - [Helm Charts OCI Proxy](k8s/helm-charts-oci-proxy/README.md)
 - [Homepage](k8s/homepage/README.md)
-- [LocalAI](k8s/local-ai/README.md)
-- [Kubelet Serving Cert Approver](k8s/kubelet-serving-cert-approver/README.md)
 - [K8sGPT Operator](k8s/k8sgpt-operator/README.md)
+- [Kubelet Serving Cert Approver](k8s/kubelet-serving-cert-approver/README.md)
+- [LocalAI](k8s/local-ai/README.md)
 - [Longhorn](k8s/longhorn/README.md)
 - [Metrics Server](k8s/metrics-server/README.md)
 - [OAuth2 Proxy](k8s/oauth2-proxy/README.md)
 - [Ollama](k8s/ollama/README.md)
 - [PlantUML](k8s/plantuml/README.md)
 - [Pulumi Operator](k8s/pulumi-operator/README.md)
+  - [Program - Harbor Proxy Program](k8s/pulumi-operator/programs/harbor-proxy-program/README.md)
 - [Reloader](k8s/reloader/README.md)
 - [Traefik](k8s/traefik/README.md)
   - [Middleware - Basic Auth](k8s/traefik/middlewares/basic-auth/README.md)

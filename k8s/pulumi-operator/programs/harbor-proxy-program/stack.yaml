@@ -1,11 +1,11 @@
 apiVersion: pulumi.com/v1
 kind: Stack
 metadata:
-  name: harbor-pulumi-stack
+  name: harbor-proxy-stack
   namespace: pulumi-operator
 spec:
-  stack: harbor-pulumi-stack
-  backend: ${pulumi_backend:=file://}${pulumi_backend_path:=/pulumi-backend}
+  stack: harbor-proxy-stack
+  backend: ${pulumi_backend:=file:///pulumi-backend}
   programRef:
     name: harbor-pulumi-program
   envRefs:
@@ -17,5 +17,5 @@ spec:
   config:
     harbor:url: ${harbor_url:=http://harbor-core.harbor}
     harbor:username: ${harbor_username:=admin}
-    harbor:password: ${harbor_admin_password:=Harbor12345}
+    harbor:password: ${harbor_password:=Harbor12345}
     harbor:insecure: ${harbor_insecure:="false"}
