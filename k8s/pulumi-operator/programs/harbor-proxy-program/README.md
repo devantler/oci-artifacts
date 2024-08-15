@@ -1,4 +1,4 @@
-# Programs - Harbor Proxy Program
+# Pulumi Operator Program - Harbor Proxy Program
 
 This program is a Pulumi program and stack that configures a Harbor instance to be able to act as a pull-through cache and proxy for bothe docker images and Helm charts.
 

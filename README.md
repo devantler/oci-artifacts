@@ -84,7 +84,7 @@ This repository contains Kubernetes (K8s) manifests distributed as OCI Artifacts
 - [Ollama](k8s/ollama/README.md)
 - [PlantUML](k8s/plantuml/README.md)
 - [Pulumi Operator](k8s/pulumi-operator/README.md)
-  - [Programs - Harbor Proxy Program](k8s/pulumi-operator/programs/harbor-proxy-program/README.md)
+  - [Program - Harbor Proxy Program](k8s/pulumi-operator/programs/harbor-proxy-program/README.md)
 - [Reloader](k8s/reloader/README.md)
 - [Traefik](k8s/traefik/README.md)
 
