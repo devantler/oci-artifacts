@@ -20,8 +20,6 @@ spec:
     deployment:
       image:
         tag: ${local_ai_image_tag:=latest-aio-cpu}
-    service:
-      port: 8080
     ingress:
       enabled: ${local_ai_ingress_enabled:=true}
       hosts:
