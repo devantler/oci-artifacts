@@ -17,6 +17,8 @@ spec:
         name: goldilocks
   # https://github.com/FairwindsOps/charts/blob/master/stable/goldilocks/values.yaml
   values:
+    image:
+      tag: v4.13.0
     dashboard:
       ingress:
         enabled: true
