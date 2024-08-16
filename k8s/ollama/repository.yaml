@@ -5,3 +5,11 @@ metadata:
 spec:
   interval: 1m
   url: https://otwld.github.io/ollama-helm/
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: open-webui
+spec:
+  interval: 1m
+  url: https://helm.openwebui.com/
