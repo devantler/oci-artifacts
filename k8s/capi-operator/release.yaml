@@ -4,6 +4,9 @@ metadata:
   name: capi-operator
 spec:
   interval: 1m
+  dependsOn:
+    - name: cert-manager
+      namespace: cert-manager
   install:
     crds: CreateReplace
   upgrade:
