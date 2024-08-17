@@ -66,6 +66,7 @@
 
 This repository contains Kubernetes (K8s) manifests distributed as OCI Artifacts.
 
+- [Cluster API Operator](k8s/capi-operator/README.md)
 - [Cert Manager](k8s/cert-manager/README.md)
 - [Cloudflared](k8s/cloudflared/README.md)
 - [GitHub Actions Runner Scale Set](k8s/gha-runner-scale-set/README.md)
