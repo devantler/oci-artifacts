@@ -27,7 +27,6 @@
     │       │   ├── helm-charts-oci-proxy
     │       │   ├── homepage
     │       │   ├── k8sgpt-operator
-    │       │   ├── local-ai
     │       │   ├── metrics-server
     │       │   ├── oauth2-proxy
     │       │   ├── ollama
@@ -44,7 +43,6 @@
     ├── homepage
     ├── k8sgpt-operator
     ├── kubelet-serving-cert-approver
-    ├── local-ai
     ├── longhorn
     ├── metrics-server
     ├── oauth2-proxy
@@ -60,7 +58,7 @@
             ├── basic-auth
             └── forward-auth
 
-53 directories
+51 directories
 ```
 <!-- readme-tree end -->
 
