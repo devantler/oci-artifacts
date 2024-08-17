@@ -7,7 +7,8 @@ An AI model serving platform to help you get up and running with Llama 3.1, Mist
 
 ## Post-build variables
 
-| Variable                           | Description                      | Default | Required |
-| ---------------------------------- | -------------------------------- | ------- | -------- |
-| ollama_ingress_enabled             | Enable ingress for Ollama        | true    | ✕        |
-| ollama_persistence_enabled         | Enable persistence for Ollama    | false   | ✕        |
+| Variable                       | Description                        | Default       | Required |
+| ------------------------------ | ---------------------------------- | ------------- | -------- |
+| ollama_ingress_enabled         | Enable ingress for Ollama          | true          | ✕        |
+| ollama_persistence_enabled     | Enable persistence for Ollama      | false         | ✕        |
+| ollama_persistence_access_mode | Persistence access mode for Ollama | ReadWriteOnce | ✕        |
