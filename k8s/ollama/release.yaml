@@ -29,6 +29,8 @@ spec:
       enabled: ${ollama_persistence_enabled:=false}
       accessModes:
         - ${ollama_persistence_access_mode:=ReadWriteOnce}
+      autoscaling:
+        enabled: ${ollama_autoscaling_enabled:=false}
     resources:
       requests:
         memory: 4096Mi
