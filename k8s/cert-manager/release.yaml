@@ -4,6 +4,10 @@ metadata:
   name: cert-manager
 spec:
   interval: 1m
+  install:
+    crds: CreateReplace
+  upgrade:
+    crds: CreateReplace
   chart:
     spec:
       chart: cert-manager
@@ -13,9 +17,13 @@ spec:
         name: cert-manager
   # https://github.com/cert-manager/cert-manager/blob/master/deploy/charts/cert-manager/values.yaml
   values:
-    # This configures cert-manager to install and upgrade CRDs as part of the Helm release.
-    # https://cert-manager.io/docs/installation/helm/#helm-installation
-    installCRDs: true
     replicaCount: ${cert_manager_replica_count:=2}
     podDisruptionBudget:
       enabled: ${cert_manager_pod_disruption_budget_enabled:=true}
+    resources:
+      requests:
+        cpu: 15m
+        memory: 105M
+      limits:
+        cpu: 15m
+        memory: 105M
