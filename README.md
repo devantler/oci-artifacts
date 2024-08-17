@@ -27,6 +27,7 @@
     │       │   ├── helm-charts-oci-proxy
     │       │   ├── homepage
     │       │   ├── k8sgpt-operator
+    │       │   ├── kyverno
     │       │   ├── metrics-server
     │       │   ├── oauth2-proxy
     │       │   ├── ollama
@@ -61,7 +62,7 @@
     │       └── forward-auth
     └── trivy-operator
 
-53 directories
+55 directories
 ```
 <!-- readme-tree end -->
 
