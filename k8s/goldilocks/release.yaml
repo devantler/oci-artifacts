@@ -22,6 +22,7 @@ spec:
     dashboard:
       ingress:
         enabled: true
+        ingressClassName: ""
         hosts:
           - host: goldilocks.${cluster_domain}
             paths:
