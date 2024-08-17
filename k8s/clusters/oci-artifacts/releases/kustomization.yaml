@@ -16,6 +16,8 @@ resources:
   - reloader
   - traefik
   # - helm-charts-oci-proxy # Not supported on ARM64
+  # - longhorn
+  # - metrics-server
   # - pulumi-operator # Not supported on ARM64
 
 patches:
