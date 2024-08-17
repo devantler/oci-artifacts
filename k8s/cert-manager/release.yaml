@@ -20,10 +20,3 @@ spec:
     replicaCount: ${cert_manager_replica_count:=2}
     podDisruptionBudget:
       enabled: ${cert_manager_pod_disruption_budget_enabled:=true}
-    resources:
-      requests:
-        cpu: 15m
-        memory: 105M
-      limits:
-        cpu: 15m
-        memory: 105M

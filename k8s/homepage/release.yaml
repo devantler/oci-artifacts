@@ -31,10 +31,3 @@ spec:
     config:
       kubernetes:
         mode: cluster
-    resources:
-      requests:
-        cpu: 15m
-        memory: 164M
-      limits:
-        cpu: 15m
-        memory: 164M
