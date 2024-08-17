@@ -23,14 +23,3 @@ spec:
       core:
         hostname: harbor.${cluster_domain}
     exposureType: ingress
-    persistence:
-      persistentVolumeClaim:
-        registry:
-          accessModes:
-            - ${harbor_persistent_volume_access_mode:=ReadWriteMany}
-        jobservice:
-          existingClaim: ""
-          storageClass: ""
-          subPath: ""
-          accessModes:
-            - ${harbor_persistent_volume_access_mode:=ReadWriteMany}
