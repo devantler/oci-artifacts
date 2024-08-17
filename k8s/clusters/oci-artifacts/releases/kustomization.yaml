@@ -9,12 +9,14 @@ resources:
   - harbor
   - homepage
   - k8sgpt-operator
+  - kyverno
   - oauth2-proxy
   - ollama
   - open-webui
   - plantuml
   - reloader
   - traefik
+  - trivy-operator
   # - helm-charts-oci-proxy # Not supported on ARM64
   # - longhorn
   # - metrics-server

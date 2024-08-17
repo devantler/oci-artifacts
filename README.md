@@ -27,6 +27,7 @@
     │       │   ├── helm-charts-oci-proxy
     │       │   ├── homepage
     │       │   ├── k8sgpt-operator
+    │       │   ├── kyverno
     │       │   ├── metrics-server
     │       │   ├── oauth2-proxy
     │       │   ├── ollama
@@ -34,7 +35,8 @@
     │       │   ├── plantuml
     │       │   ├── pulumi-operator
     │       │   ├── reloader
-    │       │   └── traefik
+    │       │   ├── traefik
+    │       │   └── trivy-operator
     │       └── variables
     ├── gha-runner-scale-set-controller
     ├── goldilocks
@@ -43,6 +45,7 @@
     ├── homepage
     ├── k8sgpt-operator
     ├── kubelet-serving-cert-approver
+    ├── kyverno
     ├── longhorn
     ├── metrics-server
     ├── oauth2-proxy
@@ -53,12 +56,13 @@
     │   └── programs
     │       └── harbor-proxy-program
     ├── reloader
-    └── traefik
-        └── middlewares
-            ├── basic-auth
-            └── forward-auth
+    ├── traefik
+    │   └── middlewares
+    │       ├── basic-auth
+    │       └── forward-auth
+    └── trivy-operator
 
-51 directories
+55 directories
 ```
 <!-- readme-tree end -->
 
@@ -77,6 +81,7 @@ This repository contains Kubernetes (K8s) manifests distributed as OCI Artifacts
 - [K8sGPT Operator](k8s/k8sgpt-operator/README.md)
 - [Kubelet Serving Cert Approver](k8s/kubelet-serving-cert-approver/README.md)
 - [LocalAI](k8s/local-ai/README.md)
+- [Kyverno](k8s/kyverno/README.md)
 - [Longhorn](k8s/longhorn/README.md)
 - [Metrics Server](k8s/metrics-server/README.md)
 - [OAuth2 Proxy](k8s/oauth2-proxy/README.md)
@@ -88,6 +93,7 @@ This repository contains Kubernetes (K8s) manifests distributed as OCI Artifacts
 - [Traefik](k8s/traefik/README.md)
   - [Middleware - Basic Auth](k8s/traefik/middlewares/basic-auth/README.md)
   - [Middleware - Forward Auth](k8s/traefik/middlewares/forward-auth/README.md)
+- [Trivy Operator](k8s/trivy-operator/README.md)
 
 OCI Artifacts are a great way to distribute ready-to-use K8s manifests. It requires almost no lines of code to get services deployed, and together with Flux and Flux post-build variables it can be a great addition to Helm charts. In most cases deploying a service, will require a single line + setting some post-build variables. In more advanced scenarios it might require patching the OCI Artifact with Kustomize patches.
 

@@ -26,3 +26,10 @@ spec:
               pathType: Prefix
     persistentVolume:
       enabled: ${ollama_persistence_enabled:=false}
+    resources:
+      requests:
+        memory: 4096Mi
+        cpu: 2000m
+      limits:
+        memory: 8192Mi
+        cpu: 4000m
