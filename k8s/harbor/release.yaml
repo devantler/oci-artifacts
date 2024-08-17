@@ -11,15 +11,15 @@ spec:
   chart:
     spec:
       chart: harbor
-      version: 23.0.0
+      version: 1.15.0
       sourceRef:
         kind: HelmRepository
         name: harbor
-  # https://github.com/bitnami/charts/blob/main/bitnami/harbor/values.yaml
+  # https://github.com/goharbor/harbor-helm/blob/main/values.yaml
   values:
     externalURL: https://harbor.${cluster_domain}
-    adminPassword: ${harbor_admin_password:=Harbor12345}
-    ingress:
-      core:
-        hostname: harbor.${cluster_domain}
-    exposureType: ingress
+    harborAdminPassword: ${harbor_admin_password:=Harbor12345}
+    expose:
+      ingress:
+        hosts:
+          core: harbor.${cluster_domain}
