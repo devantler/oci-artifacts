@@ -29,5 +29,5 @@ spec:
       - http://ollama.ollama
     ingress:
       enabled: ${ollama_open_web_ui_ingress_enabled:=true}
-      host: ai.${cluster_domain}
+      host: open-webui.${cluster_domain}
 
