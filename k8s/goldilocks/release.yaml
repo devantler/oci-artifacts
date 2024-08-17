@@ -32,3 +32,15 @@ spec:
       enabled: true
       updater:
         enabled: true
+      recommender:
+        podSecurityContext:
+          runAsNonRoot: true
+          runAsUser: 65534
+          seccompProfile:
+            type: RuntimeDefault
+        securityContext:
+          readOnlyRootFilesystem: true
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+              - ALL
