@@ -11,6 +11,7 @@ resources:
   - local-ai
   - oauth2-proxy
   - ollama
+  - open-webui
   - plantuml
   - reloader
   - traefik
