@@ -31,6 +31,7 @@
     │       │   ├── metrics-server
     │       │   ├── oauth2-proxy
     │       │   ├── ollama
+    │       │   ├── open-webui
     │       │   ├── plantuml
     │       │   ├── pulumi-operator
     │       │   ├── reloader
@@ -48,6 +49,7 @@
     ├── metrics-server
     ├── oauth2-proxy
     ├── ollama
+    ├── open-webui
     ├── plantuml
     ├── pulumi-operator
     │   └── programs
@@ -58,7 +60,7 @@
             ├── basic-auth
             └── forward-auth
 
-51 directories
+53 directories
 ```
 <!-- readme-tree end -->
 
