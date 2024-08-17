@@ -34,7 +34,8 @@
     │       │   ├── plantuml
     │       │   ├── pulumi-operator
     │       │   ├── reloader
-    │       │   └── traefik
+    │       │   ├── traefik
+    │       │   └── trivy-operator
     │       └── variables
     ├── gha-runner-scale-set-controller
     ├── goldilocks
@@ -53,12 +54,13 @@
     │   └── programs
     │       └── harbor-proxy-program
     ├── reloader
-    └── traefik
-        └── middlewares
-            ├── basic-auth
-            └── forward-auth
+    ├── traefik
+    │   └── middlewares
+    │       ├── basic-auth
+    │       └── forward-auth
+    └── trivy-operator
 
-51 directories
+53 directories
 ```
 <!-- readme-tree end -->
 
