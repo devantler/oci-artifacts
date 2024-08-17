@@ -26,7 +26,7 @@ spec:
       - name: OPENAI_API_KEY
         value: ${open_webui_pipelines_api_key:=0p3n-w3bu!}
     ollamaUrls:
-      - http://ollama.ollama
+      - http://ollama.ollama:11434
     ingress:
       enabled: ${ollama_open_web_ui_ingress_enabled:=true}
       host: open-webui.${cluster_domain}
