@@ -18,8 +18,15 @@ spec:
   # https://github.com/open-webui/helm-charts/blob/main/charts/open-webui/values.yaml
   values:
     ollama:
-      models:
-        - llama3.1
+      ingress:
+        enabled: ${ollama_ingress_enabled:=true}
+        hosts:
+          - host: ollama.${cluster_domain}
+            paths:
+              - path: /
+                pathType: Prefix
+      persistentVolume:
+        enabled: ${ollama_persistence_enabled:=false}
     extraEnvVars:
       - name: OPENAI_API_KEY
         value: ${open_webui_pipelines_api_key:=0p3n-w3bu!}
