@@ -44,6 +44,7 @@
     ├── homepage
     ├── k8sgpt-operator
     ├── kubelet-serving-cert-approver
+    ├── kyverno
     ├── longhorn
     ├── metrics-server
     ├── oauth2-proxy
@@ -78,6 +79,7 @@ This repository contains Kubernetes (K8s) manifests distributed as OCI Artifacts
 - [K8sGPT Operator](k8s/k8sgpt-operator/README.md)
 - [Kubelet Serving Cert Approver](k8s/kubelet-serving-cert-approver/README.md)
 - [LocalAI](k8s/local-ai/README.md)
+- [Kyverno](k8s/kyverno/README.md)
 - [Longhorn](k8s/longhorn/README.md)
 - [Metrics Server](k8s/metrics-server/README.md)
 - [OAuth2 Proxy](k8s/oauth2-proxy/README.md)

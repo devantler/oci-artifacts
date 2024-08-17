@@ -8,6 +8,7 @@ resources:
   - harbor
   - homepage
   - k8sgpt-operator
+  - kyverno
   - oauth2-proxy
   - ollama
   - open-webui
