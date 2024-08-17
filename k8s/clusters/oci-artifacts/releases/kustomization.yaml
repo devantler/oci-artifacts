@@ -8,7 +8,6 @@ resources:
   - harbor
   - homepage
   - k8sgpt-operator
-  - local-ai
   - oauth2-proxy
   - ollama
   - open-webui
@@ -16,6 +15,7 @@ resources:
   - reloader
   - traefik
   # - helm-charts-oci-proxy # Not supported on ARM64
+  # - local-ai
   # - longhorn
   # - metrics-server
   # - pulumi-operator # Not supported on ARM64
