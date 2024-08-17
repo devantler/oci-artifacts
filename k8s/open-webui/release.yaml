@@ -20,6 +20,9 @@ spec:
         name: open-webui
   # https://github.com/open-webui/helm-charts/blob/main/charts/open-webui/values.yaml
   values:
+    ollama:
+      models:
+        - llama3.1
     extraEnvVars:
       - name: OPENAI_API_KEY
         value: ${open_webui_pipelines_api_key:=0p3n-w3bu!}
