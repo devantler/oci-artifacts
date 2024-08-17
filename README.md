@@ -81,7 +81,6 @@ This repository contains the following OCI Artifacts:
 - [Homepage](k8s/homepage/README.md)
 - [K8sGPT Operator](k8s/k8sgpt-operator/README.md)
 - [Kubelet Serving Cert Approver](k8s/kubelet-serving-cert-approver/README.md)
-- [LocalAI](k8s/local-ai/README.md)
 - [Kyverno](k8s/kyverno/README.md)
 - [Longhorn](k8s/longhorn/README.md)
 - [Metrics Server](k8s/metrics-server/README.md)
