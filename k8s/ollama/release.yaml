@@ -19,6 +19,7 @@ spec:
   values:
     ingress:
       enabled: ${ollama_ingress_enabled:=true}
+      className: ${ingress_class_name:=}
       hosts:
         - host: ollama.${cluster_domain}
           paths:
