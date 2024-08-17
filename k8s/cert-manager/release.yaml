@@ -4,10 +4,6 @@ metadata:
   name: cert-manager
 spec:
   interval: 1m
-  install:
-    crds: CreateReplace
-  upgrade:
-    crds: CreateReplace
   chart:
     spec:
       chart: cert-manager
@@ -20,3 +16,5 @@ spec:
     replicaCount: ${cert_manager_replica_count:=2}
     podDisruptionBudget:
       enabled: ${cert_manager_pod_disruption_budget_enabled:=true}
+    crds:
+      enabled: true
