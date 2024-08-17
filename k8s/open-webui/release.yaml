@@ -4,9 +4,6 @@ metadata:
   name: open-webui
 spec:
   interval: 1m
-  dependsOn:
-    - name: ollama
-      namespace: ollama
   install:
     crds: CreateReplace
   upgrade:
