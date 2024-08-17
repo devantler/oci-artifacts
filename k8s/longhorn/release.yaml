@@ -20,4 +20,5 @@ spec:
     ingress:
       enabled: true
       host: longhorn.${cluster_domain}
+      ingressClassName: ${ingress_class_name:=}
 
