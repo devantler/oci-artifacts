@@ -40,7 +40,7 @@ jobs:
   test:
     runs-on: oci-artifacts
     needs: homelab-status
-    if: ${{ github.event.pull_request.draft == false && needs.homelab-status.result == 'success' }}
+    if: github.event.pull_request.draft == false
     steps:
     - name: 📑 Checkout
       uses: actions/checkout@v4
