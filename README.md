@@ -72,6 +72,7 @@ OCI Artifacts are a great way to distribute ready-to-use K8s manifests. It requi
 
 This repository contains the following OCI Artifacts:
 
+- [Cluster API Operator](k8s/capi-operator/README.md)
 - [Cert Manager](k8s/cert-manager/README.md)
 - [Cloudflared](k8s/cloudflared/README.md)
 - [GitHub Actions Runner Scale Set](k8s/gha-runner-scale-set/README.md)
