@@ -9,10 +9,6 @@ data:
   ingress_class_name: traefik
   local_ai_persistence_access_mode: ReadWriteOnce
   oauth2_proxy_client_id: Ov23liTcHVh1sTXBMykh
-  ollama_cpu_limit: ""
-  ollama_cpu_request: ""
-  ollama_memory_limit: ""
-  ollama_memory_request: ""
   traefik_basic_auth_user: dXNlcjokYXByMSRwZ3lTallKeiRoQVF2Z2QzcWZ4QTQuLy5wR1d6S0kxCgo=
   traefik_forward_auth_address: https://oauth2-proxy.oci-artifacts.k8s.local/
   traefik_forward_auth_ssl_host: oci-artifacts.k8s.local
