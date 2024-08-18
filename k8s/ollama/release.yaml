@@ -17,14 +17,6 @@ spec:
         name: ollama
   # https://github.com/otwld/ollama-helm/blob/main/values.yaml
   values:
-    ingress:
-      enabled: ${ollama_ingress_enabled:=true}
-      className: ${ingress_class_name:=}
-      hosts:
-        - host: ollama.${cluster_domain}
-          paths:
-            - path: /
-              pathType: Prefix
     persistentVolume:
       enabled: ${ollama_persistence_enabled:=false}
     updateStrategy:
