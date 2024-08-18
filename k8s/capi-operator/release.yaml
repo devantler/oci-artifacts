@@ -19,5 +19,4 @@ spec:
         kind: HelmRepository
         name: capi-operator
   # https://github.com/kubernetes-sigs/cluster-api-operator/blob/main/hack/charts/cluster-api-operator/values.yaml
-  values:
-    addon: helm
+  values: {}
