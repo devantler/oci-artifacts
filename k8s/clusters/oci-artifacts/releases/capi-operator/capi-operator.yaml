@@ -10,7 +10,7 @@ spec:
   interval: 1m
   dependsOn:
     - name: cert-manager
-  targetNamespace: capi-operator
+  targetNamespace: capi-operator-system
   sourceRef:
     kind: OCIRepository
     name: flux-system
