@@ -44,13 +44,6 @@ jobs:
         run: |
           ksail sops ${{ env.KSAIL_CLUSTER_NAME }} --import "${{ secrets.KSAIL_SOPS_KEY }}"
           ksail up ${{ env.KSAIL_CLUSTER_NAME }}
-      - name: 🪲 Logs
-        if: failure()
-        run: |
-          k8sgpt filters add Log
-          output=$(k8sgpt analyze --filter Log --with-doc)
-          echo "$output"
-          k8sgpt filters remove Log
       - name: 🪲 Analyze
         if: always()
         run: |
@@ -58,7 +51,7 @@ jobs:
           k8sgpt auth default -p ollama
           # k8sgpt integration activate trivy --no-install --namespace trivy-operator
           k8sgpt integration activate kyverno --no-install --namespace kyverno
-          k8sgpt filters add GatewayClass,Gateway,HTTPRoute,HorizontalPodAutoScaler,PodDisruptionBudget,NetworkPolicy
+          k8sgpt filters add GatewayClass,Gateway,HTTPRoute,HorizontalPodAutoScaler,PodDisruptionBudget,NetworkPolicy,Log
           # k8sgpt filters remove VulnerabilityReport,ConfigAuditReport
           k8sgpt filters list
           output=$(k8sgpt analyze --with-doc)
