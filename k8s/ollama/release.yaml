@@ -27,6 +27,8 @@ spec:
               pathType: Prefix
     persistentVolume:
       enabled: ${ollama_persistence_enabled:=false}
+    updateStrategy:
+      type: Recreate
     resources:
       requests:
         cpu: ${ollama_cpu_request:=}
