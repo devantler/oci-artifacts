@@ -10,6 +10,7 @@
 │   └── workflows
 ├── .vscode
 └── k8s
+    ├── capi-operator
     ├── cert-manager
     │   └── cluster-issuers
     │       ├── cloudflare-letsencrypt
@@ -19,6 +20,7 @@
     │   └── oci-artifacts
     │       ├── flux-system
     │       ├── releases
+    │       │   ├── capi-operator
     │       │   ├── cert-manager
     │       │   ├── cloudflared
     │       │   ├── gha-runner-scale-set-controller
@@ -62,7 +64,7 @@
     │       └── forward-auth
     └── trivy-operator
 
-55 directories
+57 directories
 ```
 <!-- readme-tree end -->
 
