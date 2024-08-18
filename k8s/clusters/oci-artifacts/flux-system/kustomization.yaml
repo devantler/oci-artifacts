@@ -5,7 +5,10 @@ resources:
   - variables.yaml
 
 patches:
-  - patch: |
+  - target:
+      kind: Kustomization
+      labelSelector: app.kubernetes.io/sops=enabled
+    patch: |
       apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
       kind: Kustomization
       metadata:
@@ -15,10 +18,10 @@ patches:
           provider: sops
           secretRef:
             name: sops-age
-    target:
+  - target:
       kind: Kustomization
-      labelSelector: app.kubernetes.io/sops=enabled
-  - patch: |
+      labelSelector: app.kubernetes.io/post-build-variables=enabled
+    patch: |
       apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
       kind: Kustomization
       metadata:
@@ -30,6 +33,3 @@ patches:
               name: variables
             - kind: Secret
               name: variables-sensitive
-    target:
-      kind: Kustomization
-      labelSelector: app.kubernetes.io/post-build-variables=enabled
