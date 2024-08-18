@@ -9,7 +9,6 @@ An AI model serving platform to help you get up and running with Llama 3.1, Mist
 
 | Variable                   | Description                   | Default | Required |
 | -------------------------- | ----------------------------- | ------- | -------- |
-| ollama_ingress_enabled     | Enable ingress for Ollama     | true    | ✕        |
 | ollama_persistence_enabled | Enable persistence for Ollama | false   | ✕        |
 | ollama_memory_request      | Memory request for Ollama     | 4Gi     | ✕        |
 | ollama_memory_limit        | Memory limit for Ollama       | 8Gi     | ✕        |
