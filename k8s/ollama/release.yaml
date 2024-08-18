@@ -29,8 +29,8 @@ spec:
       enabled: ${ollama_persistence_enabled:=false}
     resources:
       requests:
-        memory: ${ollama_memory_request:=}
         cpu: ${ollama_cpu_request:=}
+        memory: ${ollama_memory_request:=}
       limits:
-        memory: ${ollama_memory_limit:=}
         cpu: ${ollama_cpu_limit:=}
+        memory: ${ollama_memory_limit:=}
