@@ -17,6 +17,8 @@ spec:
         name: ollama
   # https://github.com/otwld/ollama-helm/blob/main/values.yaml
   values:
+    ollama:
+      models: [ "${ollama_model:=gemma2:2b}" ]
     ingress:
       enabled: ${ollama_ingress_enabled:=true}
       className: ${ingress_class_name:=}
