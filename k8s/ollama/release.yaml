@@ -27,10 +27,12 @@ spec:
               pathType: Prefix
     persistentVolume:
       enabled: ${ollama_persistence_enabled:=false}
+    updateStrategy:
+      type: Recreate
     resources:
       requests:
-        memory: 4096Mi
-        cpu: 2000m
+        cpu: ${ollama_cpu_request:=}
+        memory: ${ollama_memory_request:=}
       limits:
-        memory: 8192Mi
-        cpu: 4000m
+        cpu: ${ollama_cpu_limit:=}
+        memory: ${ollama_memory_limit:=}

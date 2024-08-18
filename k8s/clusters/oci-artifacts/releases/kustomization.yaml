@@ -1,22 +1,41 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - capi-operator
-  - cert-manager
-  - cloudflared
-  - gha-runner-scale-set-controller
-  - goldilocks
-  - harbor
-  - homepage
-  - k8sgpt-operator
-  - kyverno
-  - oauth2-proxy
-  - ollama
-  - open-webui
-  - plantuml
-  - reloader
-  - traefik
-  - trivy-operator
+  - capi-operator/capi-operator.yaml
+  - capi-operator/namespace.yaml
+  - cert-manager/cert-manager.yaml
+  - cert-manager/namespace.yaml
+  - cert-manager/selfsigned-cluster-issuer.yaml
+  - cloudflared/cloudflared.yaml
+  - cloudflared/namespace.yaml
+  - gha-runner-scale-set-controller/gha-runner-scale-set-controller.yaml
+  - gha-runner-scale-set-controller/namespace.yaml
+  - goldilocks/goldilocks.yaml
+  - goldilocks/namespace.yaml
+  - harbor/harbor.yaml
+  - harbor/namespace.yaml
+  - homepage/homepage.yaml
+  - homepage/namespace.yaml
+  - k8sgpt-operator/k8sgpt-operator.yaml
+  - k8sgpt-operator/namespace.yaml
+  - kyverno/kyverno.yaml
+  - kyverno/namespace.yaml
+  - oauth2-proxy/namespace.yaml
+  - oauth2-proxy/oauth2-proxy.yaml
+  - ollama/namespace.yaml
+  - ollama/ollama.yaml
+  - open-webui/namespace.yaml
+  - open-webui/open-webui.yaml
+  - plantuml/namespace.yaml
+  - plantuml/plantuml.yaml
+  - reloader/namespace.yaml
+  - reloader/reloader.yaml
+  - traefik/namespace.yaml
+  - traefik/traefik-basic-auth.yaml
+  - traefik/traefik-forward-auth.yaml
+  - traefik/traefik.yaml
+  - trivy-operator/namespace.yaml
+  - trivy-operator/trivy-operator.yaml
   # - helm-charts-oci-proxy # Not supported on ARM64
   # - longhorn
   # - metrics-server
@@ -27,7 +46,7 @@ patches:
       kind: Kustomization
       labelSelector: app.kubernetes.io/sops=enabled
     patch: |
-      apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+      apiVersion: kustomize.toolkit.fluxcd.io/v1
       kind: Kustomization
       metadata:
         name: all
@@ -40,7 +59,7 @@ patches:
       kind: Kustomization
       labelSelector: app.kubernetes.io/post-build-variables=enabled
     patch: |
-      apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+      apiVersion: kustomize.toolkit.fluxcd.io/v1
       kind: Kustomization
       metadata:
         name: all
