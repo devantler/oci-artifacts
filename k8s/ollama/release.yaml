@@ -17,12 +17,14 @@ spec:
         name: ollama
   # https://github.com/otwld/ollama-helm/blob/main/values.yaml
   values:
-    ingress:
-      enabled: ${ollama_ingress_enabled:=true}
-      hosts:
-        - host: ollama.${cluster_domain}
-          paths:
-            - path: /
-              pathType: Prefix
     persistentVolume:
       enabled: ${ollama_persistence_enabled:=false}
+    updateStrategy:
+      type: Recreate
+    resources:
+      requests:
+        cpu: ${ollama_cpu_request:=}
+        memory: ${ollama_memory_request:=}
+      limits:
+        cpu: ${ollama_cpu_limit:=}
+        memory: ${ollama_memory_limit:=}

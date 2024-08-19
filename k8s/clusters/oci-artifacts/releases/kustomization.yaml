@@ -1,6 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
+  - capi-operator
   - cert-manager
   - cloudflared
   - gha-runner-scale-set-controller
@@ -8,20 +9,25 @@ resources:
   - harbor
   - homepage
   - k8sgpt-operator
+  - kyverno
+  - metrics-server
   - oauth2-proxy
   - ollama
   - open-webui
   - plantuml
   - reloader
   - traefik
+  - trivy-operator
   # - helm-charts-oci-proxy # Not supported on ARM64
   # - longhorn
-  # - metrics-server
   # - pulumi-operator # Not supported on ARM64
 
 patches:
-  - patch: |
-      apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+  - target:
+      kind: Kustomization
+      labelSelector: app.kubernetes.io/sops=enabled
+    patch: |
+      apiVersion: kustomize.toolkit.fluxcd.io/v1
       kind: Kustomization
       metadata:
         name: all
@@ -30,11 +36,11 @@ patches:
           provider: sops
           secretRef:
             name: sops-age
-    target:
+  - target:
       kind: Kustomization
-      labelSelector: app.kubernetes.io/sops=enabled
-  - patch: |
-      apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+      labelSelector: app.kubernetes.io/post-build-variables=enabled
+    patch: |
+      apiVersion: kustomize.toolkit.fluxcd.io/v1
       kind: Kustomization
       metadata:
         name: all
@@ -45,6 +51,3 @@ patches:
               name: variables
             - kind: Secret
               name: variables-sensitive
-    target:
-      kind: Kustomization
-      labelSelector: app.kubernetes.io/post-build-variables=enabled
