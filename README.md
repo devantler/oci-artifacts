@@ -1,7 +1,7 @@
 # Welcome to Devantler's OCI Artifacts 🚀
 
 <details>
-  <summary>Show/Hide Folder Structure</summary>
+  <summary>Show/hide folder structure</summary>
 
 <!-- readme-tree start -->
 ```
@@ -10,6 +10,7 @@
 │   └── workflows
 ├── .vscode
 └── k8s
+    ├── capi-operator
     ├── cert-manager
     │   └── cluster-issuers
     │       ├── cloudflare-letsencrypt
@@ -19,6 +20,7 @@
     │   └── oci-artifacts
     │       ├── flux-system
     │       ├── releases
+    │       │   ├── capi-operator
     │       │   ├── cert-manager
     │       │   ├── cloudflared
     │       │   ├── gha-runner-scale-set-controller
@@ -26,39 +28,53 @@
     │       │   ├── harbor
     │       │   ├── helm-charts-oci-proxy
     │       │   ├── homepage
+    │       │   ├── k8sgpt-operator
+    │       │   ├── kyverno
     │       │   ├── metrics-server
     │       │   ├── oauth2-proxy
+    │       │   ├── ollama
+    │       │   ├── open-webui
     │       │   ├── plantuml
     │       │   ├── pulumi-operator
     │       │   ├── reloader
-    │       │   └── traefik
+    │       │   ├── traefik
+    │       │   └── trivy-operator
     │       └── variables
     ├── gha-runner-scale-set-controller
     ├── goldilocks
     ├── harbor
     ├── helm-charts-oci-proxy
     ├── homepage
+    ├── k8sgpt-operator
     ├── kubelet-serving-cert-approver
+    ├── kyverno
     ├── longhorn
     ├── metrics-server
     ├── oauth2-proxy
+    ├── ollama
+    ├── open-webui
     ├── plantuml
     ├── pulumi-operator
     │   └── programs
-    │       └── harbor-program
+    │       └── harbor-proxy-program
     ├── reloader
-    └── traefik
-        └── middlewares
-            └── forward-auth
+    ├── traefik
+    │   └── middlewares
+    │       ├── basic-auth
+    │       └── forward-auth
+    └── trivy-operator
 
-44 directories
+57 directories
 ```
 <!-- readme-tree end -->
 
 </details>
 
-This repository contains Kubernetes (K8s) manifests distributed as OCI Artifacts.
+OCI Artifacts are a great way to distribute ready-to-use K8s manifests. It requires almost no lines of code to get services deployed, and together with Flux and Flux post-build variables it can be a great addition to Helm charts. In most cases deploying a service, will require a single line + setting some post-build variables. In more advanced scenarios it might require patching the OCI Artifact with Kustomize patches.
 
+This repository contains the following OCI Artifacts:
+
+- [Cluster API Operator](k8s/capi-operator/README.md)
 - [Cert Manager](k8s/cert-manager/README.md)
 - [Cloudflared](k8s/cloudflared/README.md)
 - [GitHub Actions Runner Scale Set](k8s/gha-runner-scale-set/README.md)
@@ -66,16 +82,21 @@ This repository contains Kubernetes (K8s) manifests distributed as OCI Artifacts
 - [Harbor](k8s/harbor/README.md)
 - [Helm Charts OCI Proxy](k8s/helm-charts-oci-proxy/README.md)
 - [Homepage](k8s/homepage/README.md)
+- [K8sGPT Operator](k8s/k8sgpt-operator/README.md)
 - [Kubelet Serving Cert Approver](k8s/kubelet-serving-cert-approver/README.md)
+- [Kyverno](k8s/kyverno/README.md)
 - [Longhorn](k8s/longhorn/README.md)
 - [Metrics Server](k8s/metrics-server/README.md)
 - [OAuth2 Proxy](k8s/oauth2-proxy/README.md)
+- [Ollama](k8s/ollama/README.md)
 - [PlantUML](k8s/plantuml/README.md)
 - [Pulumi Operator](k8s/pulumi-operator/README.md)
+  - [Program - Harbor Proxy Program](k8s/pulumi-operator/programs/harbor-proxy-program/README.md)
 - [Reloader](k8s/reloader/README.md)
 - [Traefik](k8s/traefik/README.md)
-
-OCI Artifacts are a great way to distribute ready-to-use K8s manifests. It requires almost no lines of code to get services deployed, and together with Flux and Flux post-build variables it can be a great addition to Helm charts. In most cases deploying a service, will require a single line + setting some post-build variables. In more advanced scenarios it might require patching the OCI Artifact with Kustomize patches.
+  - [Middleware - Basic Auth](k8s/traefik/middlewares/basic-auth/README.md)
+  - [Middleware - Forward Auth](k8s/traefik/middlewares/forward-auth/README.md)
+- [Trivy Operator](k8s/trivy-operator/README.md)
 
 ## Requirements
 

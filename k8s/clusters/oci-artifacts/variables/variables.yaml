@@ -6,4 +6,8 @@ metadata:
 data:
   cluster_domain: oci-artifacts.k8s.local
   harbor_persistent_volume_access_mode: ReadWriteOnce
+  ingress_class_name: traefik
   oauth2_proxy_client_id: Ov23liTcHVh1sTXBMykh
+  traefik_basic_auth_user: dXNlcjokYXByMSRwZ3lTallKeiRoQVF2Z2QzcWZ4QTQuLy5wR1d6S0kxCgo=
+  traefik_forward_auth_address: https://oauth2-proxy.oci-artifacts.k8s.local/
+  traefik_forward_auth_ssl_host: oci-artifacts.k8s.local
