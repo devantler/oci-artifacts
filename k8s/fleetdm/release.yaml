@@ -11,8 +11,8 @@ spec:
     crds: CreateReplace
   chart:
     spec:
-      chart: fleetdm
-      version: 0.9.3
+      chart: fleet
+      version: v6.2.0
       sourceRef:
         kind: HelmRepository
         name: fleetdm
@@ -27,3 +27,24 @@ spec:
           paths:
             - path: /
               pathType: ImplementationSpecific
+      tls: {}
+    fleet:
+      tls:
+        enabled: false
+    database:
+      address: fleetdm-mysql.fleetdm:3306
+    cache:
+      address: fleetdm-redis-master.fleetdm:6379
+      usePassword: true
+    mysql:
+      enabled: true
+      auth:
+        createDatabase: true
+        database: fleet
+        username: fleet
+        existingSecret: mysql
+    redis:
+      enabled: true
+      auth:
+        existingSecret: redis
+        existingSecretPasswordKey: redis-password
