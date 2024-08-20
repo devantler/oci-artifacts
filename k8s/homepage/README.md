@@ -9,4 +9,4 @@ A modern, fully static, fast, secure fully proxied, highly customizable applicat
 
 | Variable             | Description               | Default | Required |
 | -------------------- | ------------------------- | :-----: | :------: |
-| cluster_domain       | The domain of the cluster |   ""    |    ✓     |
+| cluster_domain       | The domain of the cluster |   -    |    ✓     |

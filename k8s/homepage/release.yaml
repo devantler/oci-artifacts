@@ -15,6 +15,16 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: homepage
+  postRenderers:
+    - kustomize:
+        patches:
+          - target:
+              kind: Deployment
+              name: homepage
+            patch: |
+              - op: add
+                path: /metadata/annotations/configmap.reloader.stakater.com/reload
+                value: homepage
   # https://github.com/jameswynn/helm-charts/blob/main/charts/homepage/values.yaml
   values:
     enableRbac: true
