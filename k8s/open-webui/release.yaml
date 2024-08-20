@@ -20,6 +20,7 @@ spec:
         name: open-webui
   # https://github.com/open-webui/helm-charts/blob/main/charts/open-webui/values.yaml
   values:
+    nameOverride: open-webui
     ollama:
       enabled: false
     ollamaUrls:
