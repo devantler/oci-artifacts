@@ -15,7 +15,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: longhorn
-  # https://github.com/longhorn/charts/blob/v1.6.x/charts/longhorn/values.yaml
+  # https://github.com/longhorn/charts/blob/v1.7.x/charts/longhorn/values.yaml
   values:
     ingress:
       enabled: true
