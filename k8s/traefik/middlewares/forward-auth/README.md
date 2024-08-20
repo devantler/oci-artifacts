@@ -12,6 +12,6 @@ This middleware adds forward authentication to requests.
 
 | Variable                                      | Description                                     | Default | Required |
 | --------------------------------------------- | ----------------------------------------------- | :-----: | :------: |
-| traefik_forward_auth_address                  | The address of the forward auth service         |   ""    |    ✓     |
-| traefik_forward_auth_ssl_host                 | The host of the forward auth service            |   ""    |    ✓     |
+| traefik_forward_auth_address                  | The address of the forward auth service         |   -    |    ✓     |
+| traefik_forward_auth_ssl_host                 | The host of the forward auth service            |   -    |    ✓     |
 | traefik_forward_auth_tls_insecure_skip_verify | Whether to skip verification of the certificate |  true   |    ✕     |

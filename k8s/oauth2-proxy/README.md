@@ -9,12 +9,12 @@ A reverse proxy that provides authentication with OpenID Connect and many more i
 
 | Variable                     | Description                                                    | Default | Required |
 | ---------------------------- | -------------------------------------------------------------- | :-----: | :------: |
-| cluster_domain               | The domain of the cluster                                      |   ""    |    ✓     |
+| cluster_domain               | The domain of the cluster                                      |   -    |    ✓     |
 | oauth2_proxy_ingress_enabled | Whether to enable an ingress route to the OAuth2 Proxy service |  true   |    ✕     |
-| oauth2_proxy_client_id       | The OAuth2 client ID                                           |   ""    |    ✓     |
-| oauth2_proxy_client_secret   | The OAuth2 client secret                                       |   ""    |    ✓     |
-| oauth2_proxy_cookie_secret   | The secret used to encrypt the cookie                          |   ""    |    ✓     |
-| oauth2_proxy_cookie_name     | The name of the cookie                                         |   ""    |    ✕     |
+| oauth2_proxy_client_id       | The OAuth2 client ID                                           |   -    |    ✓     |
+| oauth2_proxy_client_secret   | The OAuth2 client secret                                       |   -    |    ✓     |
+| oauth2_proxy_cookie_secret   | The secret used to encrypt the cookie                          |   -    |    ✓     |
+| oauth2_proxy_cookie_name     | The name of the cookie                                         |   -    |    ✕     |
 
 To further configure OAuth2 Proxy, you must create a ConfigMap with the desired configuration, and deploy it in the oauth2-proxy namespace with the name `oauth2-proxy-configmap`.
 

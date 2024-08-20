@@ -6,4 +6,4 @@ Cloudflared is a tunneling daemon based on Wireguard that can proxy a local webs
 
 | Variable                 | Description                                 | Default | Required |
 | ------------------------ | ------------------------------------------- | :-----: | :------: |
-| cloudflared_tunnel_token | The token for an existing Cloudflare tunnel |   ""    |    ✓     |
+| cloudflared_tunnel_token | The token for an existing Cloudflare tunnel |   -    |    ✓     |
