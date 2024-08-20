@@ -76,6 +76,8 @@ This repository contains the following OCI Artifacts:
 
 - [Cluster API Operator](k8s/capi-operator/README.md)
 - [Cert Manager](k8s/cert-manager/README.md)
+  - [Cluster Issuer - Cloudflare LetsEncrypt](k8s/cert-manager/cluster-issuers/cloudflare-letsencrypt/README.md)
+  - [Cluster Issuer - Self-Signed](k8s/cert-manager/cluster-issuers/selfsigned/README.md)
 - [Cloudflared](k8s/cloudflared/README.md)
 - [GitHub Actions Runner Scale Set](k8s/gha-runner-scale-set/README.md)
 - [Goldilocks](k8s/goldilocks/README.md)
