@@ -1,5 +1,9 @@
 # Welcome to Devantler's OCI Artifacts 🚀
 
+> [!WARN]
+> This repo will soon be deprecated. It became a big maintenance overhead, when I only use the artifacts in my [homelab](https://github.com/devantler/homelab). Furthermore I have learned this is not such a great approach, as it is to dependent on tooling (FluxCD). If someone else thinks of this, I would suggest to do it with either Helm Umbrella Charts or Timoni. These solutions will provide much better templating, and be more open for consumption. Both solutions could still be distributed as OCI artifacts.
+
+
 <details>
   <summary>Show/hide folder structure</summary>
 
