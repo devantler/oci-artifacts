@@ -4,6 +4,7 @@ resources:
   - capi-operator
   - cert-manager
   - cloudflared
+  - fleetdm
   - gha-runner-scale-set-controller
   - goldilocks
   - harbor
